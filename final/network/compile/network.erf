@@ -1,10 +1,20 @@
 WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
-MESSAGE "File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd" 
-BEGINPROGRESS C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+MESSAGE "File: C:/Users/vision lab/Documents/GitHub/ece441final/final/network/src/fpga.vhd" 
+MESSAGE "Compile Entity "fpga"" 
+MESSAGE "Compile Architecture "fpga" of Entity "fpga"" 
+MESSAGE "File: C:/Users/vision lab/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd" 
+BEGINPROGRESS C:/Users/vision lab/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
 MESSAGE "Compile Package "project_package"" 
 UPDATEPROGRESS 1
 UPDATEPROGRESS 85
 UPDATEPROGRESS 99
 UPDATEPROGRESS 100
-ENDPROGRESS C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 
+ENDPROGRESS C:/Users/vision lab/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+MESSAGE "File: C:/Users/vision lab/Documents/GitHub/ece441final/final/network/src/network.vhd" 
+MESSAGE "Compile Entity "network"" 
+MESSAGE "Compile Architecture "network" of Entity "network"" 
+MESSAGE "File: C:/Users/vision lab/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd" 
+MESSAGE "Compile Entity "fpga_tb"" 
+MESSAGE "Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"" 
+MESSAGE "Compile Configuration "TESTBENCH_FOR_fpga"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  1.0 [s]" 

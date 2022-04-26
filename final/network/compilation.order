@@ -1,2 +1,4 @@
 .\src\fpga.vhd
 .\src\final_proj_package.vhd
+.\src\network.vhd
+.\src\TestBench\fpga_TB.vhd

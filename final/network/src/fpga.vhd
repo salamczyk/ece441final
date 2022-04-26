@@ -24,6 +24,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.project_package.all;
 
 
 entity fpga is
@@ -73,8 +74,9 @@ function hexToSegments(h:unsigned(3 downto 0)) return std_logic_vector is
 	    return ret;
 	end function;
 	
+	signal output: final_output;
 begin 
-	
+	network: entity work.network port map (img => image_0, clk => CLOCK_50, output => output); 
 	
 
 	 -- enter your statements here --

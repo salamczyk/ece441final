@@ -1,3 +1,8 @@
-6
-~E 1 "../src/fpga.vhd" 29 fpga
-~A 1 "../src/fpga.vhd" 49 fpga
+59
+~E 1 "../src/fpga.vhd" 30 fpga
+~A 1 "../src/fpga.vhd" 50 fpga
+~E 1 "../src/TestBench/fpga_TB.vhd" 12 fpga_tb
+~A 1 "../src/TestBench/fpga_TB.vhd" 15 TB_ARCHITECTURE
+~E 1 "../src/network.vhd" 30 network
+~A 1 "../src/network.vhd" 39 network
+~C 1 "../src/TestBench/fpga_TB.vhd" 83 testbench_for_fpga

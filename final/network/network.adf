@@ -3,13 +3,17 @@ Current Flow=Multivendor
 VCS=0
 version=4
 Current Config=compile
+
 [Configurations]
 compile=network
+
 [Library]
 network=.\network\network.lib
+
 [$LibMap$]
 network=.
 Active_lib=
+
 [Settings]
 FLOW_TYPE=HDL
 LANGUAGE=VHDL
@@ -24,17 +28,31 @@ FLOWTOOLS=IMPL_WITH_SYNTH
 ON_SERVERFARM_SYNTH=0
 ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
+
 [IMPLEMENTATION]
 UCF=
+
+[SpecTracer]
+WindowVisible=0
+
+[HierarchyViewer]
+HierarchyInformation=fpga_tb|TB_ARCHITECTURE|0 network|network|0 
+ShowHide=ShowTopLevel
+Selected=
+
 [Files]
 /fpga.vhd=-1
 /final_proj_package.vhd=-1
+/network.vhd=-1
+TestBench/fpga_TB.vhd=-1
+TestBench/fpga_TB_runtest.do=-1
+
 [Files.Data]
 .\src\fpga.vhd=VHDL Source Code
 .\src\final_proj_package.vhd=VHDL Source Code
-[SpecTracer]
-WindowVisible=0
-[HierarchyViewer]
-HierarchyInformation=fpga|fpga|0 
-ShowHide=ShowTopLevel
-Selected=
+.\src\network.vhd=VHDL Source Code
+.\src\TestBench\fpga_TB.vhd=VHDL Test Bench
+.\src\TestBench\fpga_TB_runtest.do=Macro
+
+[Groups]
+TestBench=1
