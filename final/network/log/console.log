@@ -1,0 +1,177 @@
+# Design: Design network already active.
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: C-Synthesis: Not Defined
+# DESIGN: HDL Synthesis: Intel Quartus Prime Standard Synthesis & Implementation 20.1
+# DESIGN: Physical Synthesis: Not Defined
+# DESIGN: Implementation: Not Defined
+# Error: Synthesis top-level unit not selected on the General tab of Synthesis Options.
+acom -reorder -O3 -e 100 -work network -2019  $dsn/src/fpga.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
+# Compile Entity "fpga"
+# Compile Architecture "fpga" of Entity "fpga"
+# Top-level unit(s) detected:
+# Entity => fpga
+# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -e 100 -work network -2019  $dsn/src/fpga.vhd $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
+# Compile Entity "fpga"
+# Compile Architecture "fpga" of Entity "fpga"
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Warning: COMP96_0003: Source file "C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd" is empty.
+# Compile success 0 Errors 1 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Error: COMP96_0015: final_proj_package.vhd : (11, 60): ';' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Too many errors - compilation terminated
+# Error: COMP96_0367: final_proj_package.vhd : (14, 36): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (14, 46): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (14, 56): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (14, 66): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (14, 76): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (14, 86): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (15, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (15, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (15, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (15, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (15, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (15, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (16, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (16, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (16, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (16, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (16, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (16, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (17, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (17, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (17, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (17, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (17, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (17, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (18, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (18, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (18, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (18, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (18, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (18, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (19, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (19, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (19, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (19, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (19, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (19, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (20, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (20, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (20, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (20, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (20, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (20, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (21, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (21, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (21, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (21, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (21, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (21, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (22, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (22, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (22, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (22, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (22, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (22, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (23, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (23, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (23, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (23, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (23, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (23, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (24, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (24, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (24, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (24, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (24, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (24, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (25, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (25, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (25, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (25, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (25, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (25, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (26, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (26, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (26, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (26, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (26, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (26, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (27, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (27, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (27, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (27, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (27, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (27, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (28, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (28, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (28, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (28, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (28, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (28, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (29, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (29, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (29, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (29, 33): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (29, 43): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (29, 53): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (30, 3): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (30, 13): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (30, 23): Improper array length (20). Expected length is 18.
+# Error: COMP96_0367: final_proj_package.vhd : (30, 33): Improper array length (20). Expected length is 18.
+# Compile failure 100 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Error: COMP96_0019: final_proj_package.vhd : (14, 2): Keyword 'end' expected.
+# Error: COMP96_0111: final_proj_package.vhd : (14, 2): Labels do not match.
+# Error: COMP96_0015: final_proj_package.vhd : (14, 12): ';' expected.
+# Error: COMP96_0016: final_proj_package.vhd : (14, 22): Design unit declaration expected.
+# Error: COMP96_0018: final_proj_package.vhd : (801, 12): Identifier expected.
+# Compile failure 5 Errors 0 Warnings  Analysis time :  46.0 [ms]
+acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Error: COMP96_0015: final_proj_package.vhd : (799, 21): ':' expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  78.0 [ms]
+acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work network -2019  $dsn/src/fpga.vhd $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
+# Compile Entity "fpga"
+# Compile Architecture "fpga" of Entity "fpga"
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
+# Compile Package "project_package"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
