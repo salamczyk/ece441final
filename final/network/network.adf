@@ -20,7 +20,7 @@ LANGUAGE=VHDL
 REFRESH_FLOW=1
 FAMILY=Quartus CycloneV
 SYNTH_TOOL=MV_QUARTUS_SYNTHESIS201
-RUN_MODE_SYNTH=0
+RUN_MODE_SYNTH=1
 CSYNTH_TOOL=
 PHYSSYNTH_TOOL=
 IMPL_TOOL=
@@ -28,31 +28,76 @@ FLOWTOOLS=IMPL_WITH_SYNTH
 ON_SERVERFARM_SYNTH=0
 ON_SERVERFARM_IMPL=0
 ON_SERVERFARM_SIM=0
+SYNTH_STATUS=none
+IMPL_STATUS=none
+VerilogDirsChanged=0
 
 [IMPLEMENTATION]
 UCF=
+DEVICE_TECHNOLOGY_MIGRATION_LIST=
+LAST_RUN=1651018340
 
 [SpecTracer]
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=fpga_tb|TB_ARCHITECTURE|0 network|network|0 
+HierarchyInformation=fpga_tb|testbench_for_fpga|1 
 ShowHide=ShowTopLevel
 Selected=
 
+[Groups]
+TestBench=1
+
+[SYNTHESIS]
+FAMILY=Quartus CycloneV
+DEVICE=5CSXFC6D6F31C
+SPEED=6
+TOPLEVEL=fpga
+JOB_DESCRIPTION=SynthesisTask
+JOB_SFM_RESOURCE=
+ENABLE_SIGNALTAP=0
+SERVERFARM_INCLUDE_INPUT_FILES=*.*
+SERVERFARM_EXCLUDE_INPUT_FILES=
+OVERWRITE_PROJECT=1
+AUTO_CLOSE=0
+QSF_FILE_SELECTION=synthesis/fpga.qsf
+CHECK_PROJECT_OUTPUT_DIRECTORY=0
+CHECK_OPTIMIZE_HOLD_TIMING=1
+USE_SIGNALTAP_FILE=
+ENABLE_LOGIC_ANALYZER_INTERFACE=0
+USE_LOGIC_ANALYZER_INTERFACE_FILE=
+OLD_FAMILY=Quartus CycloneV
+CHECK_IMPORT_PIN_ASSIGNMENTS=0
+IMPORT_PIN_ASSIGNMENTS=.\synthesis\fpga.qsf
+CHECK_GENERATE_FPGA_EXCHANGE_FILE=0
+GENERATE_FPGA_EXCHANGE_FILE=.\symbols\fpgaxchange
+BTM_IO_STANDARD=1.2V
+DEFAULT_QUARTUS_SETTINGS_FILE=..\..\..\..\..\..\..\intelFPGA_lite\20.1\quartus\bin64\assignment_defaults.qdf
+OUTPUT_IO_TIMING_NEAR_END_VMEAS_RISE=Half Signal Swing
+OUTPUT_IO_TIMING_NEAR_END_VMEAS_FALL=Half Signal Swing
+OUTPUT_IO_TIMING_FAR_END_VMEAS_RISE=Half Signal Swing
+OUTPUT_IO_TIMING_FAR_END_VMEAS_FALL=Half Signal Swing
+LAST_RUN=1651018340
+
 [Files]
-/fpga.vhd=-1
 /final_proj_package.vhd=-1
 /network.vhd=-1
+/fpga.vhd=-1
+/untitled.asdb=-1
+/untitled.awc=-1
 TestBench/fpga_TB.vhd=-1
 TestBench/fpga_TB_runtest.do=-1
+/untitle1d.asdb=-1
+/untitle1d.awc=-1
 
 [Files.Data]
-.\src\fpga.vhd=VHDL Source Code
 .\src\final_proj_package.vhd=VHDL Source Code
 .\src\network.vhd=VHDL Source Code
+.\src\fpga.vhd=VHDL Source Code
+.\src\untitled.asdb=Accelerated Waveform File
+.\src\untitled.awc=Accelerated Waveform Configuration
 .\src\TestBench\fpga_TB.vhd=VHDL Test Bench
 .\src\TestBench\fpga_TB_runtest.do=Macro
 
-[Groups]
-TestBench=1
+.\src\untitle1d.asdb=Accelerated Waveform File
+.\src\untitle1d.awc=Accelerated Waveform Configuration

@@ -1,4 +1,4 @@
-59
+78
 ~E 1 "../src/fpga.vhd" 30 fpga
 ~A 1 "../src/fpga.vhd" 50 fpga
 ~E 1 "../src/TestBench/fpga_TB.vhd" 12 fpga_tb

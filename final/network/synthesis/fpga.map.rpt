@@ -1,0 +1,1399 @@
+Analysis & Synthesis report for fpga
+Tue Apr 26 20:24:53 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "network:network"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Apr 26 20:24:53 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; fpga                                        ;
+; Top-level Entity Name           ; fpga                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 70                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; fpga               ; fpga               ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation                             ; All                ; All                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; ../src/fpga.vhd                  ; yes             ; User VHDL File  ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd               ;         ;
+; ../src/final_proj_package.vhd    ; yes             ; User VHDL File  ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd ;         ;
+; ../src/network.vhd               ; yes             ; User VHDL File  ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd            ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 0        ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 0        ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 0        ;
+;     -- 5 input functions                    ; 0        ;
+;     -- 4 input functions                    ; 0        ;
+;     -- <=3 input functions                  ; 0        ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 70       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 1        ;
+; Total fan-out                               ; 70       ;
+; Average fan-out                             ; 0.50     ;
++---------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |fpga                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 70   ; 0            ; |fpga               ; fpga        ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "network:network"                                                                               ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; img[0..125]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[132..150]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[161..177]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[189..204]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[215..232]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[245..259]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[274..287]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[293..294]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[302..313]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[321..323]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[331..341]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[348..351]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[359..369]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[376..381]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[387..397]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[403..409]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[415..424]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[430..437]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[443..452]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[458..463]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[470..480]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[487..491]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[498..508]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[516..519]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[526..537]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[554..565]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[580..593]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[608..623]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[634..653]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[660..783]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[126][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[126][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[126][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[126][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[126][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[127][6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[127][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[127][2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[127][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[127][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[127][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[128][6..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[128][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[128][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[128][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[128][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[129][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[129][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[129][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[130][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[130][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[130][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[130][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[130][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[130][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[130][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[131][4..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[131][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[131][6]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[131][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[131][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[131][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[151][2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[151][31..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[151][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[151][3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[151][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[152][5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[152][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[152][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[153][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[153][6..5]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[153][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[153][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[153][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[153][3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[153][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[154][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[154][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[154][4..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[154][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[154][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[154][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[155][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[155][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[155][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[155][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[156][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[156][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[156][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[156][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[157][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[157][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[157][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[157][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[158][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[158][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[158][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[158][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[159][7..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[159][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[159][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[160][6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[160][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[160][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[160][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[178][31..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[178][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[178][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[179][5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[179][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[179][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[179][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[179][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[180][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[180][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[180][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[180][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[181][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[181][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[181][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[181][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[182][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[182][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[182][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[183][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[183][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[183][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[183][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[184][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[184][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[184][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[184][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[185][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[185][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[185][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[185][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[186][7..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[186][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[186][2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[186][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[187][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[187][6..5]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[187][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[187][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[187][3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[187][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[187][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[187][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[188][6..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[188][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[188][3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[205][3..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[205][31..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[206][5..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[206][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[206][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[206][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[207][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[207][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[207][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[207][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[208][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[208][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[208][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[208][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[209][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[209][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[209][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[209][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[210][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[210][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[210][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[211][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[211][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[211][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[211][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[212][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[212][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[212][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[212][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[213][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[213][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[213][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[213][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[214][5..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[214][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[214][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[214][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[214][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[214][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[214][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[233][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[233][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[233][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[233][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[233][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[233][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[234][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[234][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[234][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[234][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[235][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[235][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[235][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[235][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[236][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[236][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[236][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[236][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[237][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[237][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[237][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[237][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[238][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[238][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[238][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[239][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[239][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[239][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[239][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[240][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[240][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[240][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[240][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[241][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[241][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[241][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[241][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[242][7..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[242][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[242][3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[242][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[242][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[242][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[243][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[243][3..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[243][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[243][5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[244][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[244][4..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[244][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[244][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[244][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[260][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[260][5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[260][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[260][6]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[260][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[261][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[261][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[261][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[261][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[261][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[262][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[262][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[262][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[262][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[263][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[263][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[263][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[263][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[264][7..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[264][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[264][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[265][2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[265][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[265][6..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[265][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[265][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[266][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[266][5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[266][6]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[266][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[266][2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[266][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[266][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[267][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[267][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[267][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[267][5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[267][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[268][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[268][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[268][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[268][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[269][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[269][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[269][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[269][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[270][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[270][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[270][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[270][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[271][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[271][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[271][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[271][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[272][2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[272][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[272][6..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[272][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[272][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[273][31..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[273][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[273][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[288][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[288][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[288][4..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[289][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[289][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[289][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[289][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[290][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[290][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[290][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[290][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[291][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[291][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[291][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[291][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[292][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[292][6..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[292][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[295][4..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[295][31..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[295][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[295][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[296][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[296][3..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[296][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[296][5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[296][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[297][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[297][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[297][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[297][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[298][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[298][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[298][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[298][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[299][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[299][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[299][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[299][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[300][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[300][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[300][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[300][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[301][4..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[301][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[301][6]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[301][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[301][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[314][2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[314][31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[314][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[315][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[315][4..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[315][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[315][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[315][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[315][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[316][7..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[316][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[316][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[316][2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[317][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[317][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[317][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[317][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[318][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[318][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[318][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[318][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[319][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[319][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[319][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[319][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[319][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[319][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[319][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[320][31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[320][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[320][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[324][2..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[324][31..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[324][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[324][3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[325][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[325][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[325][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[325][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[326][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[326][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[326][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[326][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[327][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[327][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[327][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[327][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[328][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[328][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[328][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[328][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[329][7..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[329][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[329][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[330][5..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[330][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[330][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[342][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[342][6..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[342][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[342][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[342][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[343][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[343][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[343][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[343][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[344][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[344][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[344][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[344][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[345][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[345][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[345][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[345][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[346][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[346][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[346][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[346][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[347][5..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[347][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[347][3..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[347][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[352][31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[352][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[352][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[353][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[353][6..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[353][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[353][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[354][7..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[354][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[354][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[355][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[355][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[355][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[355][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[356][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[356][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[356][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[356][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[357][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[357][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[357][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[357][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[358][5..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[358][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[358][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[358][2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[370][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[370][4..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[370][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[370][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[370][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[370][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[370][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[371][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[371][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[371][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[371][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[372][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[372][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[372][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[372][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[373][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[373][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[373][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[373][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[374][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[374][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[374][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[374][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[374][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[374][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[374][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[374][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[375][2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[375][31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[375][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[382][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[382][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[382][4..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[383][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[383][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[383][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[383][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[384][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[384][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[384][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[384][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[385][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[385][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[385][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[385][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[386][5..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[386][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[386][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[386][2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[398][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[398][4..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[398][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[398][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[398][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[398][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[398][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[398][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[399][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[399][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[399][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[400][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[400][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[400][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[401][7..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[401][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[401][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[401][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[401][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[402][2..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[402][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[402][5..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[402][6]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[410][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[410][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[410][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[410][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[410][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[411][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[411][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[411][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[412][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[412][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[412][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[413][31..9] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[413][7..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[413][8]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[414][5..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[414][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[414][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[414][2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[425][5..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[425][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[425][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[425][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[425][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[426][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[426][3..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[426][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[426][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[426][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[427][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[427][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[427][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[427][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[428][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[428][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[428][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[428][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[429][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[429][4..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[429][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[429][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[438][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[438][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[438][4..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[439][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[439][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[439][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[439][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[440][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[440][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[440][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[440][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[441][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[441][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[441][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[441][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[441][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[442][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[442][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[442][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[442][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[442][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[442][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[453][5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[453][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[453][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[454][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[454][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[454][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[454][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[455][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[455][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[455][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[455][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[456][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[456][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[456][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[456][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[457][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[457][4..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[457][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[457][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[464][31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[464][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[465][2..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[465][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[465][6]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[465][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[465][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[465][3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[466][7..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[466][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[466][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[466][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[467][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[467][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[467][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[467][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[468][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[468][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[468][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[468][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[469][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[469][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[469][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[469][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[469][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[469][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[481][5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[481][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[481][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[482][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[482][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[482][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[482][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[483][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[483][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[483][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[483][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[484][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[484][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[484][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[484][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[485][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[485][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[485][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[485][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[485][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[485][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[486][5..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[486][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[486][2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[486][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[492][3..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[492][31..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[493][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[493][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[493][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[493][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[494][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[494][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[494][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[494][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[495][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[495][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[495][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[495][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[496][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[496][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[496][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[496][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[497][4..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[497][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[497][6]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[497][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[497][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[497][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[509][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[509][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[509][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[509][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[509][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[509][2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[510][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[510][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[510][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[510][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[511][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[511][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[511][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[511][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[512][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[512][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[512][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[512][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[513][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[513][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[513][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[513][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[514][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[514][3..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[514][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[514][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[514][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[515][5..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[515][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[515][2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[515][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[520][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[520][6..5]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[520][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[520][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[520][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[520][3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[520][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[521][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[521][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[521][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[521][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[522][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[522][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[522][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[522][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[523][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[523][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[523][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[523][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[524][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[524][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[524][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[524][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[524][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[524][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[524][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[524][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[525][2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[525][31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[525][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[538][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[538][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[538][6..5]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[538][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[538][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[538][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[539][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[539][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[539][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[539][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[540][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[540][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[540][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[540][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[541][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[541][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[541][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[541][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[542][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[542][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[542][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[542][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[543][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[543][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[543][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[543][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[544][5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[544][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[544][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[545]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[546][31..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[546][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[546][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[546][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[546][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[547][5..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[547][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[547][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[547][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[548][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[548][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[548][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[548][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[549][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[549][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[549][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[549][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[550][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[550][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[550][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[550][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[551][7..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[551][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[551][2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[551][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[552][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[552][4..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[552][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[552][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[553][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[553][31..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[553][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[566][3..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[566][31..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[567][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[567][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[567][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[567][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[568][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[568][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[568][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[568][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[569][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[569][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[569][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[569][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[570][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[570][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[570][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[570][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[571][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[571][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[571][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[571][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[572][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[572][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[572][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[572][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[572][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[573][2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[573][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[573][6..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[573][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[573][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[574][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[574][3..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[574][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[574][5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[574][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[574][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[575][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[575][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[575][2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[575][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[575][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[575][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[576][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[576][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[576][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[576][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[577][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[577][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[577][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[577][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[578][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[578][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[578][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[578][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[579][3..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[579][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[579][6..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[579][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[594][31..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[594][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[594][2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[594][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[594][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[595][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[595][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[595][4..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[595][7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[595][6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[595][5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[596][7..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[596][1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[596][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[596][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[597][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[597][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[597][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[597][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[598][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[598][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[598][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[598][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[599][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[599][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[599][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[599][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[600][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[600][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[600][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[600][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[601][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[601][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[601][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[601][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[602][31..9] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[602][7..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[602][8]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[603][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[603][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[603][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[603][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[604][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[604][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[604][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[604][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[605][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[605][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[605][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[605][5]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[605][4]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[605][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[605][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[606][6..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[606][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[606][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[607][31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[607][1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[607][2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[624][6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[624][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[624][4..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[624][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[625][6..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[625][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[625][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[626][7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[626][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[626][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[626][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[626][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[627][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[627][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[627][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[627][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[628][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[628][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[628][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[628][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[629][7..2]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[629][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[629][1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[629][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[630][7..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[630][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[630][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[631][7..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[631][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[631][3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[631][1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[631][0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[632][7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[632][2..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[632][31..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[632][5..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[633][4..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[633][31..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[654][5..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[654][31..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[654][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[655][6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[655][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[655][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[655][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[655][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[656][6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[656][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[656][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[656][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[656][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[657][6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[657][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[657][2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[657][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[657][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[658][31..9] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[658][7..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[658][8]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[659][6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[659][31..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[659][2..1]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[659][4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; img[659][3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; img[659][0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; output          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 70                          ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Apr 26 20:12:40 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off network -c fpga
+Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /users/steph/documents/github/ece441final/final/network/src/fpga.vhd
+    Info (12022): Found design unit 1: fpga-fpga File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 50
+    Info (12023): Found entity 1: fpga File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 30
+Info (12021): Found 1 design units, including 0 entities, in source file /users/steph/documents/github/ece441final/final/network/src/final_proj_package.vhd
+    Info (12022): Found design unit 1: project_package File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file /users/steph/documents/github/ece441final/final/network/src/network.vhd
+    Info (12022): Found design unit 1: network-network File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd Line: 39
+    Info (12023): Found entity 1: network File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd Line: 30
+Info (12127): Elaborating entity "fpga" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at fpga.vhd(38): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+Warning (10541): VHDL Signal Declaration warning at fpga.vhd(39): used implicit default value for signal "HEX0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+Warning (10541): VHDL Signal Declaration warning at fpga.vhd(40): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+Warning (10541): VHDL Signal Declaration warning at fpga.vhd(41): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+Warning (10541): VHDL Signal Declaration warning at fpga.vhd(42): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+Warning (10541): VHDL Signal Declaration warning at fpga.vhd(43): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+Warning (10541): VHDL Signal Declaration warning at fpga.vhd(44): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+Warning (10036): Verilog HDL or VHDL warning at fpga.vhd(77): object "output" assigned a value but never read File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 77
+Info (12128): Elaborating entity "network" for hierarchy "network:network" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 79
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 40
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 41
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 42
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
+Warning (20013): Ignored 24 assignments for entity "DE10_Standard_FB" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_COLOR 16764057 -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE10_Standard_FB -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE10_Standard_FB -section_id Top was ignored
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 18 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_50" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 32
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 33
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 34
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 35
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 36
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 37
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 37
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 37
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 37
+Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 52 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 105 warnings
+    Info: Peak virtual memory: 7850 megabytes
+    Info: Processing ended: Tue Apr 26 20:24:53 2022
+    Info: Elapsed time: 00:12:13
+    Info: Total CPU time (on all processors): 00:12:20
+
+

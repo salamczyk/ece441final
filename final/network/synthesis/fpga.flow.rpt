@@ -1,0 +1,160 @@
+Flow report for fpga
+Tue Apr 26 20:25:47 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Flow Summary                                                                  ;
++---------------------------------+---------------------------------------------+
+; Flow Status                     ; Successful - Tue Apr 26 20:25:47 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; fpga                                        ;
+; Top-level Entity Name           ; fpga                                        ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CSXFC6D6F31C6                              ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 1 / 41,910 ( < 1 % )                        ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 70 / 499 ( 14 % )                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
+; Total DSP Blocks                ; 0 / 112 ( 0 % )                             ;
+; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
+; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
+; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
+; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                               ;
+; Total PLLs                      ; 0 / 15 ( 0 % )                              ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 04/26/2022 20:12:40 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; fpga                ;
++-------------------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                       ;
++-------------------------------------------+---------------------------------------------------------------+---------------+------------------+-------------------------+
+; Assignment Name                           ; Value                                                         ; Default Value ; Entity Name      ; Section Id              ;
++-------------------------------------------+---------------------------------------------------------------+---------------+------------------+-------------------------+
+; ADV_NETLIST_OPT_RETIME_CORE_AND_IO        ; -- (Not supported for targeted family)                        ; On            ; --               ; --                      ;
+; BOARD_MODEL_FAR_C                         ; Open                                                          ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_FAR_PULLDOWN_R                ; Open                                                          ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_FAR_PULLUP_R                  ; Open                                                          ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_FAR_SERIES_R                  ; Short                                                         ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_NEAR_C                        ; Open                                                          ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_NEAR_PULLDOWN_R               ; Open                                                          ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_NEAR_PULLUP_R                 ; Open                                                          ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_NEAR_SERIES_R                 ; Short                                                         ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_NEAR_TLINE_C_PER_LENGTH       ; 0                                                             ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_NEAR_TLINE_LENGTH             ; 0                                                             ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_NEAR_TLINE_L_PER_LENGTH       ; 0                                                             ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_TERMINATION_V                 ; 0                                                             ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_TLINE_C_PER_LENGTH            ; 0                                                             ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_TLINE_LENGTH                  ; 0                                                             ; --            ; --               ; 1.2V                    ;
+; BOARD_MODEL_TLINE_L_PER_LENGTH            ; 0                                                             ; --            ; --               ; 1.2V                    ;
+; COMPILER_SIGNATURE_ID                     ; 4681965753228.165101836010660                                 ; --            ; --               ; --                      ;
+; EDA_GENERATE_POWER_INPUT_FILE             ; Off                                                           ; --            ; --               ; eda_simulation          ;
+; EDA_OUTPUT_DATA_FORMAT                    ; Vhdl                                                          ; --            ; --               ; eda_simulation          ;
+; EDA_OUTPUT_DATA_FORMAT                    ; None                                                          ; --            ; --               ; eda_board_design_symbol ;
+; EDA_SIMULATION_TOOL                       ; Active-HDL (VHDL)                                             ; <None>        ; --               ; --                      ;
+; EDA_TIME_SCALE                            ; 1 ps                                                          ; --            ; --               ; eda_simulation          ;
+; INCREMENTAL_COMPILATION_EXPORT_FLATTEN    ; Off                                                           ; --            ; --               ; --                      ;
+; INCREMENTAL_COMPILATION_EXPORT_POST_FIT   ; Off                                                           ; --            ; --               ; --                      ;
+; INCREMENTAL_COMPILATION_EXPORT_POST_SYNTH ; Off                                                           ; --            ; --               ; --                      ;
+; INCREMENTAL_COMPILATION_EXPORT_ROUTING    ; -- (Not supported for targeted family)                        ; --            ; --               ; --                      ;
+; OPTIMIZE_HOLD_TIMING                      ; IO Paths and Minimum TPD Paths                                ; All Paths     ; --               ; --                      ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS            ; Half Signal Swing                                             ; --            ; --               ; --                      ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS            ; Half Signal Swing                                             ; --            ; --               ; --                      ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS           ; Half Signal Swing                                             ; --            ; --               ; --                      ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS           ; Half Signal Swing                                             ; --            ; --               ; --                      ;
+; PARTITION_COLOR                           ; -- (Not supported for targeted family)                        ; --            ; DE10_Standard_FB ; Top                     ;
+; PARTITION_COLOR                           ; -- (Not supported for targeted family)                        ; --            ; --               ; Top                     ;
+; PARTITION_FITTER_PRESERVATION_LEVEL       ; -- (Not supported for targeted family)                        ; --            ; DE10_Standard_FB ; Top                     ;
+; PARTITION_FITTER_PRESERVATION_LEVEL       ; -- (Not supported for targeted family)                        ; --            ; --               ; Top                     ;
+; PARTITION_NETLIST_TYPE                    ; -- (Not supported for targeted family)                        ; --            ; DE10_Standard_FB ; Top                     ;
+; PARTITION_NETLIST_TYPE                    ; -- (Not supported for targeted family)                        ; --            ; --               ; Top                     ;
+; USER_LIBRARIES                            ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src ; --            ; --               ; --                      ;
++-------------------------------------------+---------------------------------------------------------------+---------------+------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:12:13     ; 1.0                     ; 7850 MB             ; 00:12:20                           ;
+; Fitter               ; 00:00:31     ; 1.0                     ; 7784 MB             ; 00:01:42                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4840 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:13     ; 1.0                     ; 5256 MB             ; 00:00:13                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4728 MB             ; 00:00:01                           ;
+; Total                ; 00:13:03     ; --                      ; --                  ; 00:14:21                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off network -c fpga
+quartus_fit --read_settings_files=off --write_settings_files=off network -c fpga
+quartus_asm --read_settings_files=off --write_settings_files=off network -c fpga
+quartus_sta network -c fpga
+quartus_eda --read_settings_files=off --write_settings_files=off network -c fpga
+
+
+

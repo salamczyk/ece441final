@@ -37,75 +37,75 @@ end network;
 --}} End of automatically maintained section
 
 architecture network of network is
-signal output_1: intermediate_output;
-
-signal output_2: final_output;
 
 
+signal state: integer range 0 to 6;   
 
-signal state: integer range 0 to 6; 
-signal i: integer := 0;
 begin
-	output <= output_2;
-	process(clk)
 	
+	process(clk)
+	variable output_1: intermediate_output;
+	variable output_2: final_output;
 	begin	
 		if(rising_edge(clk)) then
 		case state is
 			when 0 =>
-				output_1 <= bias_1;	
+				report("State 0");
+				output_1 := bias_1;	
 			
-				output_2 <= bias_2;
+				output_2 := bias_2;
 				state <= 1;
 			
 			when 1 =>
-			
-	        	for j in 0 to 783 loop
-	            	output_1(i) <= output_1(i) + resize((img(i) * weights_1(j, i)), 18); 
+				report("State 1");
+				for i in 0 to 127 loop
+	        		for j in 0 to 783 loop
+	            	output_1(i) := output_1(i) + img(j) * weights_1(j, i); 
 					--report(integer'image(j));
-	        	end loop;
-	    		i <= i + 1;
+	        		end loop;
+				end loop;
+	    		state <= 2;	 
 				
-				if(i = 127) then 
-					state <= 2;
-				end if;
-				
-			when 2 => 
+			when 2 => 	
+				report("State 2");
 				for j in 0 to 127 loop
-					if(output_1(j)(17) = '1') then
-						output_1(j) <= "000000000000000000";
+					if(output_1(j) < 0) then
+						output_1(j) := 0;
 					end if;
 				end loop;  
 				
-				i <= 0;
-				state <= 3;
+				state <= 3;	
 				
-			when 3 => 
+			when 3 => 	
+				report("State 3");
 				for j in 0 to 127 loop 
-					output_1(j) <=  shift_right(output_1(j), 8);
-				end loop;	
+					output_1(j) :=  output_1(j) / 256;
+				end loop;
 				
 				state <= 4; 
-				i <= 0;
 			when 4 =>	
-				for j in 0 to 127 loop
-	            	output_2(i) <= output_2(i) + resize((output_1(i) * weights_2(j, i)), 18);
-	        	end loop;
-	    		i <= i + 1;
+				report("State 4");
+				for i in 0 to 9 loop
+					for j in 0 to 127 loop
+					output_2(i) := output_2(i) + output_1(j) * weights_2(j, i); 
+					--report(integer'image(j));
+					end loop;
+				end loop;
 				
-				if(i = 9) then 
-					state <= 5;
-				end if;
-			when 5 => 
+				state <= 5;
+			when 5 => 	
+				report("State 5");
 				for j in 0 to 9 loop
-					output_2(j) <= shift_right(output_1(j), 8);
+					output_2(j) := output_2(j) / 256;
 				end loop;
 				state <= 6;  
-			when 6 => 
+			when 6 => 	   
+				report("State 6");
 				for j in 0 to 9 loop
-					output_2(j) <= shift_right(output_1(j), 8);
+					output_2(j) := output_2(j) / 256;
 				end loop;
-				state <= 0;
+				state <= 0;	
+				output <= output_2;	 
 			
 		end case;
 	end if;
