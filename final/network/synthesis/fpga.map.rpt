@@ -1,5 +1,5 @@
 Analysis & Synthesis report for fpga
-Tue Apr 26 20:24:53 2022
+Wed Apr 27 14:42:16 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,10 +14,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "network:network"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: pll:thepll|pll_0002:pll_inst|altera_pll:altera_pll_i
+ 10. Port Connectivity Checks: "network:network"
+ 11. Port Connectivity Checks: "pll:thepll"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 26 20:24:53 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Apr 27 14:42:16 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; fpga                                        ;
 ; Top-level Entity Name           ; fpga                                        ;
@@ -168,15 +170,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
-; ../src/fpga.vhd                  ; yes             ; User VHDL File  ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd               ;         ;
-; ../src/final_proj_package.vhd    ; yes             ; User VHDL File  ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd ;         ;
-; ../src/network.vhd               ; yes             ; User VHDL File  ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd            ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                   ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------------------+--------------------------------------------------------------------------------------+---------+
+; ../src/fpga.vhd                  ; yes             ; User VHDL File              ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd               ;         ;
+; ../src/final_proj_package.vhd    ; yes             ; User VHDL File              ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd ;         ;
+; ../src/network.vhd               ; yes             ; User VHDL File              ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd            ;         ;
+; ../MEGA/pll.vhd                  ; yes             ; User Wizard-Generated File  ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll.vhd               ;         ;
+; ../MEGA/pll/pll_0002.v           ; yes             ; User Verilog HDL File       ; C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll/pll_0002.v        ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v                  ;         ;
++----------------------------------+-----------------+-----------------------------+--------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------+
@@ -229,6 +234,253 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pll:thepll|pll_0002:pll_inst|altera_pll:altera_pll_i ;
++--------------------------------------+------------------------+-----------------------------------+
+; Parameter Name                       ; Value                  ; Type                              ;
++--------------------------------------+------------------------+-----------------------------------+
+; reference_clock_frequency            ; 50.0 MHz               ; String                            ;
+; fractional_vco_multiplier            ; false                  ; String                            ;
+; pll_type                             ; General                ; String                            ;
+; pll_subtype                          ; General                ; String                            ;
+; number_of_clocks                     ; 1                      ; Signed Integer                    ;
+; operation_mode                       ; direct                 ; String                            ;
+; deserialization_factor               ; 4                      ; Signed Integer                    ;
+; data_rate                            ; 0                      ; Signed Integer                    ;
+; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                    ;
+; output_clock_frequency0              ; 1.171875 MHz           ; String                            ;
+; phase_shift0                         ; 0 ps                   ; String                            ;
+; duty_cycle0                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency1              ; 0 MHz                  ; String                            ;
+; phase_shift1                         ; 0 ps                   ; String                            ;
+; duty_cycle1                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency2              ; 0 MHz                  ; String                            ;
+; phase_shift2                         ; 0 ps                   ; String                            ;
+; duty_cycle2                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency3              ; 0 MHz                  ; String                            ;
+; phase_shift3                         ; 0 ps                   ; String                            ;
+; duty_cycle3                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency4              ; 0 MHz                  ; String                            ;
+; phase_shift4                         ; 0 ps                   ; String                            ;
+; duty_cycle4                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency5              ; 0 MHz                  ; String                            ;
+; phase_shift5                         ; 0 ps                   ; String                            ;
+; duty_cycle5                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency6              ; 0 MHz                  ; String                            ;
+; phase_shift6                         ; 0 ps                   ; String                            ;
+; duty_cycle6                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency7              ; 0 MHz                  ; String                            ;
+; phase_shift7                         ; 0 ps                   ; String                            ;
+; duty_cycle7                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency8              ; 0 MHz                  ; String                            ;
+; phase_shift8                         ; 0 ps                   ; String                            ;
+; duty_cycle8                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency9              ; 0 MHz                  ; String                            ;
+; phase_shift9                         ; 0 ps                   ; String                            ;
+; duty_cycle9                          ; 50                     ; Signed Integer                    ;
+; output_clock_frequency10             ; 0 MHz                  ; String                            ;
+; phase_shift10                        ; 0 ps                   ; String                            ;
+; duty_cycle10                         ; 50                     ; Signed Integer                    ;
+; output_clock_frequency11             ; 0 MHz                  ; String                            ;
+; phase_shift11                        ; 0 ps                   ; String                            ;
+; duty_cycle11                         ; 50                     ; Signed Integer                    ;
+; output_clock_frequency12             ; 0 MHz                  ; String                            ;
+; phase_shift12                        ; 0 ps                   ; String                            ;
+; duty_cycle12                         ; 50                     ; Signed Integer                    ;
+; output_clock_frequency13             ; 0 MHz                  ; String                            ;
+; phase_shift13                        ; 0 ps                   ; String                            ;
+; duty_cycle13                         ; 50                     ; Signed Integer                    ;
+; output_clock_frequency14             ; 0 MHz                  ; String                            ;
+; phase_shift14                        ; 0 ps                   ; String                            ;
+; duty_cycle14                         ; 50                     ; Signed Integer                    ;
+; output_clock_frequency15             ; 0 MHz                  ; String                            ;
+; phase_shift15                        ; 0 ps                   ; String                            ;
+; duty_cycle15                         ; 50                     ; Signed Integer                    ;
+; output_clock_frequency16             ; 0 MHz                  ; String                            ;
+; phase_shift16                        ; 0 ps                   ; String                            ;
+; duty_cycle16                         ; 50                     ; Signed Integer                    ;
+; output_clock_frequency17             ; 0 MHz                  ; String                            ;
+; phase_shift17                        ; 0 ps                   ; String                            ;
+; duty_cycle17                         ; 50                     ; Signed Integer                    ;
+; clock_name_0                         ;                        ; String                            ;
+; clock_name_1                         ;                        ; String                            ;
+; clock_name_2                         ;                        ; String                            ;
+; clock_name_3                         ;                        ; String                            ;
+; clock_name_4                         ;                        ; String                            ;
+; clock_name_5                         ;                        ; String                            ;
+; clock_name_6                         ;                        ; String                            ;
+; clock_name_7                         ;                        ; String                            ;
+; clock_name_8                         ;                        ; String                            ;
+; clock_name_global_0                  ; false                  ; String                            ;
+; clock_name_global_1                  ; false                  ; String                            ;
+; clock_name_global_2                  ; false                  ; String                            ;
+; clock_name_global_3                  ; false                  ; String                            ;
+; clock_name_global_4                  ; false                  ; String                            ;
+; clock_name_global_5                  ; false                  ; String                            ;
+; clock_name_global_6                  ; false                  ; String                            ;
+; clock_name_global_7                  ; false                  ; String                            ;
+; clock_name_global_8                  ; false                  ; String                            ;
+; m_cnt_hi_div                         ; 1                      ; Signed Integer                    ;
+; m_cnt_lo_div                         ; 1                      ; Signed Integer                    ;
+; m_cnt_bypass_en                      ; false                  ; String                            ;
+; m_cnt_odd_div_duty_en                ; false                  ; String                            ;
+; n_cnt_hi_div                         ; 1                      ; Signed Integer                    ;
+; n_cnt_lo_div                         ; 1                      ; Signed Integer                    ;
+; n_cnt_bypass_en                      ; false                  ; String                            ;
+; n_cnt_odd_div_duty_en                ; false                  ; String                            ;
+; c_cnt_hi_div0                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div0                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en0                     ; false                  ; String                            ;
+; c_cnt_in_src0                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en0               ; false                  ; String                            ;
+; c_cnt_prst0                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst0                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div1                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div1                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en1                     ; false                  ; String                            ;
+; c_cnt_in_src1                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en1               ; false                  ; String                            ;
+; c_cnt_prst1                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst1                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div2                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div2                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en2                     ; false                  ; String                            ;
+; c_cnt_in_src2                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en2               ; false                  ; String                            ;
+; c_cnt_prst2                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst2                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div3                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div3                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en3                     ; false                  ; String                            ;
+; c_cnt_in_src3                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en3               ; false                  ; String                            ;
+; c_cnt_prst3                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst3                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div4                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div4                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en4                     ; false                  ; String                            ;
+; c_cnt_in_src4                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en4               ; false                  ; String                            ;
+; c_cnt_prst4                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst4                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div5                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div5                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en5                     ; false                  ; String                            ;
+; c_cnt_in_src5                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en5               ; false                  ; String                            ;
+; c_cnt_prst5                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst5                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div6                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div6                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en6                     ; false                  ; String                            ;
+; c_cnt_in_src6                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en6               ; false                  ; String                            ;
+; c_cnt_prst6                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst6                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div7                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div7                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en7                     ; false                  ; String                            ;
+; c_cnt_in_src7                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en7               ; false                  ; String                            ;
+; c_cnt_prst7                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst7                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div8                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div8                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en8                     ; false                  ; String                            ;
+; c_cnt_in_src8                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en8               ; false                  ; String                            ;
+; c_cnt_prst8                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst8                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div9                        ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div9                        ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en9                     ; false                  ; String                            ;
+; c_cnt_in_src9                        ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en9               ; false                  ; String                            ;
+; c_cnt_prst9                          ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst9                   ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div10                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div10                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en10                    ; false                  ; String                            ;
+; c_cnt_in_src10                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en10              ; false                  ; String                            ;
+; c_cnt_prst10                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst10                  ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div11                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div11                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en11                    ; false                  ; String                            ;
+; c_cnt_in_src11                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en11              ; false                  ; String                            ;
+; c_cnt_prst11                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst11                  ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div12                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div12                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en12                    ; false                  ; String                            ;
+; c_cnt_in_src12                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en12              ; false                  ; String                            ;
+; c_cnt_prst12                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst12                  ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div13                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div13                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en13                    ; false                  ; String                            ;
+; c_cnt_in_src13                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en13              ; false                  ; String                            ;
+; c_cnt_prst13                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst13                  ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div14                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div14                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en14                    ; false                  ; String                            ;
+; c_cnt_in_src14                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en14              ; false                  ; String                            ;
+; c_cnt_prst14                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst14                  ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div15                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div15                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en15                    ; false                  ; String                            ;
+; c_cnt_in_src15                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en15              ; false                  ; String                            ;
+; c_cnt_prst15                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst15                  ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div16                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div16                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en16                    ; false                  ; String                            ;
+; c_cnt_in_src16                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en16              ; false                  ; String                            ;
+; c_cnt_prst16                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst16                  ; 0                      ; Signed Integer                    ;
+; c_cnt_hi_div17                       ; 1                      ; Signed Integer                    ;
+; c_cnt_lo_div17                       ; 1                      ; Signed Integer                    ;
+; c_cnt_bypass_en17                    ; false                  ; String                            ;
+; c_cnt_in_src17                       ; ph_mux_clk             ; String                            ;
+; c_cnt_odd_div_duty_en17              ; false                  ; String                            ;
+; c_cnt_prst17                         ; 1                      ; Signed Integer                    ;
+; c_cnt_ph_mux_prst17                  ; 0                      ; Signed Integer                    ;
+; pll_vco_div                          ; 1                      ; Signed Integer                    ;
+; pll_slf_rst                          ; false                  ; String                            ;
+; pll_bw_sel                           ; low                    ; String                            ;
+; pll_output_clk_frequency             ; 0 MHz                  ; String                            ;
+; pll_cp_current                       ; 0                      ; Signed Integer                    ;
+; pll_bwctrl                           ; 0                      ; Signed Integer                    ;
+; pll_fractional_division              ; 1                      ; Signed Integer                    ;
+; pll_fractional_cout                  ; 24                     ; Signed Integer                    ;
+; pll_dsm_out_sel                      ; 1st_order              ; String                            ;
+; mimic_fbclk_type                     ; gclk                   ; String                            ;
+; pll_fbclk_mux_1                      ; glb                    ; String                            ;
+; pll_fbclk_mux_2                      ; fb_1                   ; String                            ;
+; pll_m_cnt_in_src                     ; ph_mux_clk             ; String                            ;
+; pll_vcoph_div                        ; 1                      ; Signed Integer                    ;
+; refclk1_frequency                    ; 0 MHz                  ; String                            ;
+; pll_clkin_0_src                      ; clk_0                  ; String                            ;
+; pll_clkin_1_src                      ; clk_0                  ; String                            ;
+; pll_clk_loss_sw_en                   ; false                  ; String                            ;
+; pll_auto_clk_sw_en                   ; false                  ; String                            ;
+; pll_manu_clk_sw_en                   ; false                  ; String                            ;
+; pll_clk_sw_dly                       ; 0                      ; Signed Integer                    ;
+; pll_extclk_0_cnt_src                 ; pll_extclk_cnt_src_vss ; String                            ;
+; pll_extclk_1_cnt_src                 ; pll_extclk_cnt_src_vss ; String                            ;
++--------------------------------------+------------------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -1237,6 +1489,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++----------------------------------------+
+; Port Connectivity Checks: "pll:thepll" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; rst  ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -1267,7 +1528,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Apr 26 20:12:40 2022
+    Info: Processing started: Wed Apr 27 14:30:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off network -c fpga
 Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file /users/steph/documents/github/ece441final/final/network/src/fpga.vhd
@@ -1278,6 +1539,11 @@ Info (12021): Found 1 design units, including 0 entities, in source file /users/
 Info (12021): Found 2 design units, including 1 entities, in source file /users/steph/documents/github/ece441final/final/network/src/network.vhd
     Info (12022): Found design unit 1: network-network File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd Line: 39
     Info (12023): Found entity 1: network File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd Line: 30
+Info (12021): Found 2 design units, including 1 entities, in source file /users/steph/documents/github/ece441final/final/network/mega/pll.vhd
+    Info (12022): Found design unit 1: pll-rtl File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll.vhd Line: 19
+    Info (12023): Found entity 1: pll File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file /users/steph/documents/github/ece441final/final/network/mega/pll/pll_0002.v
+    Info (12023): Found entity 1: pll_0002 File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll/pll_0002.v Line: 2
 Info (12127): Elaborating entity "fpga" for the top level hierarchy
 Warning (10541): VHDL Signal Declaration warning at fpga.vhd(38): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
 Warning (10541): VHDL Signal Declaration warning at fpga.vhd(39): used implicit default value for signal "HEX0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 39
@@ -1287,7 +1553,76 @@ Warning (10541): VHDL Signal Declaration warning at fpga.vhd(42): used implicit 
 Warning (10541): VHDL Signal Declaration warning at fpga.vhd(43): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 43
 Warning (10541): VHDL Signal Declaration warning at fpga.vhd(44): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 44
 Warning (10036): Verilog HDL or VHDL warning at fpga.vhd(77): object "output" assigned a value but never read File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 77
-Info (12128): Elaborating entity "network" for hierarchy "network:network" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 79
+Info (12128): Elaborating entity "pll" for hierarchy "pll:thepll" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 82
+Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:thepll|pll_0002:pll_inst" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll.vhd Line: 31
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll:thepll|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll/pll_0002.v Line: 85
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "pll:thepll|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll/pll_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll:thepll|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll/pll_0002.v Line: 85
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "1"
+    Info (12134): Parameter "output_clock_frequency0" = "1.171875 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "0 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "network" for hierarchy "network:network" File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 83
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following PLL node(s):
+        Warning (14320): Synthesized away node "pll:thepll|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0]" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd Line: 38
@@ -1390,10 +1725,10 @@ Warning (21074): Design contains 18 input pin(s) that do not drive logic
 Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 52 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 7850 megabytes
-    Info: Processing ended: Tue Apr 26 20:24:53 2022
-    Info: Elapsed time: 00:12:13
-    Info: Total CPU time (on all processors): 00:12:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 108 warnings
+    Info: Peak virtual memory: 7854 megabytes
+    Info: Processing ended: Wed Apr 27 14:42:16 2022
+    Info: Elapsed time: 00:12:03
+    Info: Total CPU time (on all processors): 00:12:10
 
 

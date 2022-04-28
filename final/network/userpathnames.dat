@@ -4,3 +4,4 @@ MV_QUARTUS_SYNTHESIS201=1
 tools=1
 [tools*VerilogDirs]
 src=user
+MEGA=user

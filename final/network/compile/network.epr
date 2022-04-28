@@ -1,5 +1,1 @@
-"C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd" VHDL network 1 0 0 -02 -08 -18
-"C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd" VHDL network 1 0 0 -02 -08 -18
-"C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd" VHDL network 1 0 0 -02 -08 -18
-"C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd" VHDL network 1 0 0 -02 -08 -18
-. . 0 0 0
+"../MEGA/pll/pll_0002.v"	2

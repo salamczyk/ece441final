@@ -1,85 +1,10 @@
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/fpga.vhd $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+fpga_tb fpga_tb TB_ARCHITECTURE
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of package 'network.project_package' referenced in entity 'fpga' differ from the contents available during the compilation of this entity.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-# Error: VSIM: cannot select specified top-level
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of package 'network.project_package' referenced in entity 'fpga' differ from the contents available during the compilation of this entity.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of package 'network.project_package' referenced in entity 'fpga' differ from the contents available during the compilation of this entity.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-# ELBREAD: Elaboration process.
-# ELBREAD: Error: The contents of package 'network.project_package' referenced in entity 'fpga' differ from the contents available during the compilation of this entity.
-# ELBREAD: Error: Elaboration process completed with errors.
-# Design: Error: Elaboration failed
-acom -reorder -O3 -e 100 -work network -2019  $dsn/src/fpga.vhd $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Incorrect order of units detected.
-# Automatic reorder and incremental recompilation of required units in progress.
-# Top-level unit(s) detected:
-# Configuration => TESTBENCH_FOR_fpga
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Architecture "fpga" of Entity "fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
+# ELBREAD: Warning: The contents of module 'pll_0002' instantiated in architecture 'rtl' differ from the contents available during the compilation of this architecture.
+# ELBREAD: Elaboration time 0.2 [s].
 asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
+# ELBREAD: Warning: The contents of module 'pll_0002' instantiated in architecture 'rtl' differ from the contents available during the compilation of this architecture.
+# ELBREAD: Elaboration time 0.3 [s].
 # VSIM: Stack memory: 32MB
 # VSIM: Retval memory: 32MB
 # 
@@ -88,990 +13,143 @@ asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL alte
 # ELAB2: Elaboration final pass...
 # ELAB2: Create instances ...
 # KERNEL: Time resolution set to 1ps.
+# ELBREAD: Warning: ELBREAD_0054 pll_0002.v (17): Too few port connections. Region: /fpga_tb/UUT/thepll/pll_inst/altera_pll_i
 # ELAB2: Create instances complete.
 # SLP: Started
 # SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# SLP: Warning: altera_lnsim.sv (28454): Index [1] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28455): Index [2] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28456): Index [3] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28457): Index [4] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28458): Index [5] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28459): Index [6] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28460): Index [7] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28461): Index [8] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28462): Index [9] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28463): Index [10] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28464): Index [11] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28465): Index [12] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28466): Index [13] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28467): Index [14] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28468): Index [15] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28469): Index [16] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Warning: altera_lnsim.sv (28470): Index [17] is out of range [0:0] of 'output_clock_frequency_parameter'.
+# SLP: Elaboration phase ... done : 0.0 [s]
+# SLP: Generation phase ...
+# SLP: Generation phase ... done : 0.2 [s]
+# SLP: Finished : 0.3 [s]
+# SLP: 0 primitives and 42 (95.45%) other processes in SLP
+# SLP: 427 (99.07%) signals in SLP and 4 (0.93%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.4 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 8047 kB (elbread=256 elab2=7652 kernel=138 sdf=0)
+# Allocation: Simulator allocated 18689 kB (elbread=256 elab2=18208 kernel=224 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:11 PM, Tuesday, April 26, 2022
+#  8:23 PM, Wednesday, April 27, 2022
 #  Simulation has been initialized
 # 1 object(s) traced.
 # Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
 # 1 object(s) traced.
+run @100ns
+# KERNEL: Info: hierarchical_name = fpga_tb.UUT.thepll.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen
+# KERNEL: Adjusting output period from 853970.964987 to 892000.000000
+# KERNEL: Info: =================================================
+# KERNEL: Info:           Generic PLL Summary
+# KERNEL: Info: =================================================
+# KERNEL: Time scale of (fpga_tb.UUT.thepll.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen) is 1ps / 1ps
+# KERNEL: Info: hierarchical_name = fpga_tb.UUT.thepll.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen
+# KERNEL: Info: reference_clock_frequency = 50.0 MHz
+# KERNEL: Info: output_clock_frequency = 1.171 MHZ
+# KERNEL: Info: phase_shift = 0 ps
+# KERNEL: Info: duty_cycle = 50
+# KERNEL: Info: sim_additional_refclk_cycles_to_lock = 0
+# KERNEL: Info: output_clock_high_period = 446000.000000
+# KERNEL: Info: output_clock_low_period = 446000.000000
+# EXECUTION:: NOTE   : State 0
+# EXECUTION:: Time: 10 ns,  Iteration: 7,  Instance: /fpga_tb/UUT/network,  Process: line__46.
+# KERNEL: stopped at time: 100 ns
+run @200ns
+# KERNEL: stopped at time: 200 ns
+run @300ns
+# KERNEL: stopped at time: 300 ns
+run @400ns
+# KERNEL: stopped at time: 400 ns
+run @500ns
+# KERNEL: stopped at time: 500 ns
 # 1 object(s) traced.
 # 1 object(s) traced.
 # 1 object(s) traced.
-# 1 object(s) traced.
-run @10us
-# KERNEL: stopped at time: 10 us
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
+restart
 # ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
+# ELBREAD: Warning: The contents of module 'pll_0002' instantiated in architecture 'rtl' differ from the contents available during the compilation of this architecture.
+# ELBREAD: Elaboration time 0.3 [s].
 # 
 # KERNEL: Main thread initiated.
 # KERNEL: Kernel process initialization phase.
 # ELAB2: Elaboration final pass...
 # ELAB2: Create instances ...
 # KERNEL: Time resolution set to 1ps.
+# ELBREAD: Warning: ELBREAD_0054 pll_0002.v (17): Too few port connections. Region: /fpga_tb/UUT/thepll/pll_inst/altera_pll_i
 # ELAB2: Create instances complete.
 # SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# SLP: Finished. Using existing simulator library
+# SLP: 0 primitives and 42 (95.45%) other processes in SLP
+# SLP: 427 (99.07%) signals in SLP and 4 (0.93%) interface signals
+# ELAB2: Elaboration final pass complete - time: 0.1 [s].
+# KERNEL: SLP loading done - time: 0.0 [s].
 # KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
 # KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: SLP simulation initialization done - time: 0.0 [s].
 # KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7013 kB (elbread=256 elab2=6619 kernel=137 sdf=0)
+# Allocation: Simulator allocated 18689 kB (elbread=256 elab2=18208 kernel=224 sdf=0)
 # KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:13 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-# 7 object(s) traced.
-run @10us
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__50.
-# KERNEL: stopped at time: 10 us
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0078: network.vhd : (44, 12): Unknown identifier "output_2".
-# Error: COMP96_0133: network.vhd : (44, 12): Cannot find object declaration.
-# Error: COMP96_0077: network.vhd : (44, 12): Undefined type of expression. Expected type 'final_output'.
-# Error: COMP96_0078: network.vhd : (74, 5): Unknown identifier "i".
-# Error: COMP96_0133: network.vhd : (74, 5): Cannot find object declaration.
-# Error: COMP96_0123: network.vhd : (79, 6): Variable or constant cannot be the target of a signal assignment.
-# Error: COMP96_0078: network.vhd : (83, 5): Unknown identifier "i".
-# Error: COMP96_0133: network.vhd : (83, 5): Cannot find object declaration.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile failure 8 Errors 0 Warnings  Analysis time :  0.2 [s]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0078: network.vhd : (74, 5): Unknown identifier "i".
-# Error: COMP96_0133: network.vhd : (74, 5): Cannot find object declaration.
-# Error: COMP96_0123: network.vhd : (79, 6): Variable or constant cannot be the target of a signal assignment.
-# Error: COMP96_0078: network.vhd : (83, 5): Unknown identifier "i".
-# Error: COMP96_0133: network.vhd : (83, 5): Cannot find object declaration.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile failure 5 Errors 0 Warnings  Analysis time :  0.2 [s]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7017 kB (elbread=256 elab2=6622 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:15 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-# 4 object(s) traced.
-run @10us
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# KERNEL: stopped at time: 10 us
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7017 kB (elbread=256 elab2=6622 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:15 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-# 4 object(s) traced.
-run @10us
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 170 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 310 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 450 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 590 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 730 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 870 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1010 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1150 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1290 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1430 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1570 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1710 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1850 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 1990 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 2130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 2270 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 2410 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 2550 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 2690 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 2830 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 2970 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 3110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 3250 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 3390 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 3530 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 3670 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 3810 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 3950 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 4090 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 4230 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 4370 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 4510 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 4650 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 4790 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 4930 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 5070 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 5210 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 5350 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 5490 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 5630 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 5770 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 5910 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 6050 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 6190 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 6330 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 6470 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 6610 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 6750 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 6890 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 7030 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 7170 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 7310 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 7450 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 7590 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 7730 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 7870 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8010 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8150 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8290 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8430 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8570 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8710 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8850 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 8990 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 9130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 9270 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 9410 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 9550 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 9690 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 9830 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 9970 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# KERNEL: stopped at time: 10 us
-endsim
-# VSIM: Simulation has finished.
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7017 kB (elbread=256 elab2=6623 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:17 PM, Tuesday, April 26, 2022
+#  8:24 PM, Wednesday, April 27, 2022
 #  Simulation has been initialized
 # Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
 run @1us
+# KERNEL: Info: hierarchical_name = fpga_tb.UUT.thepll.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen
+# KERNEL: Adjusting output period from 853970.964987 to 892000.000000
+# KERNEL: Info: =================================================
+# KERNEL: Info:           Generic PLL Summary
+# KERNEL: Info: =================================================
+# KERNEL: Time scale of (fpga_tb.UUT.thepll.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen) is 1ps / 1ps
+# KERNEL: Info: hierarchical_name = fpga_tb.UUT.thepll.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen
+# KERNEL: Info: reference_clock_frequency = 50.0 MHz
+# KERNEL: Info: output_clock_frequency = 1.171 MHZ
+# KERNEL: Info: phase_shift = 0 ps
+# KERNEL: Info: duty_cycle = 50
+# KERNEL: Info: sim_additional_refclk_cycles_to_lock = 0
+# KERNEL: Info: output_clock_high_period = 446000.000000
+# KERNEL: Info: output_clock_low_period = 446000.000000
 # EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 10 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 10 ns,  Iteration: 7,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 50 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 70 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 90 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 150 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 170 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 190 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 210 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 230 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 250 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 270 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 290 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 310 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 330 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 350 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 370 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 390 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 410 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 430 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 450 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 470 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 490 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 510 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 530 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 550 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 570 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 590 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 610 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 630 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 650 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 670 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 690 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 710 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 730 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 750 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 770 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 790 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 810 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 830 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 850 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 870 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 890 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 910 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 930 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 950 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 970 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 990 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 902 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # KERNEL: stopped at time: 1 us
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7017 kB (elbread=256 elab2=6623 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:17 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-run @150ns
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 10 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+run @11us
 # EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 50 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 1794 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 70 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 2686 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 90 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 3578 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 4470 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 5362 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 150 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# KERNEL: stopped at time: 150 ns
-restart
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7017 kB (elbread=256 elab2=6623 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:18 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-run @140ns
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 10 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 6254 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 7146 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 50 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 8038 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 70 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 8930 ns,  Iteration: 4,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 90 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
+# EXECUTION:: Time: 9822 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
 # EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__45.
-# KERNEL: stopped at time: 140 ns
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
-endsim
-# VSIM: Simulation has finished.
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7021 kB (elbread=256 elab2=6627 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:19 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-# 5 object(s) traced.
-run @140ns
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 10 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 50 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 70 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 90 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# KERNEL: stopped at time: 140 ns
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0078: network.vhd : (45, 13): Unknown identifier "intermediate_weights".
-# Error: COMP96_0064: network.vhd : (45, 13): Unknown type.
-# Error: COMP96_0078: network.vhd : (46, 13): Unknown identifier "final_weights".
-# Error: COMP96_0064: network.vhd : (46, 13): Unknown type.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile failure 4 Errors 0 Warnings  Analysis time :  0.2 [s]
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0064: network.vhd : (45, 13): Unknown type.
-# Error: COMP96_0064: network.vhd : (46, 13): Unknown type.
-# Compile failure 2 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.3 [s]
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 14123 kB (elbread=256 elab2=13728 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:22 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-# 7 object(s) traced.
-run @140ns
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 10 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__49.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__49.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 50 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__49.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 70 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__49.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 90 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__49.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__49.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__49.
-# KERNEL: stopped at time: 140 ns
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 7022 kB (elbread=256 elab2=6627 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:24 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-# 5 object(s) traced.
-run @140ns
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 10 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__47.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__47.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 50 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__47.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 70 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__47.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 90 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__47.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__47.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__47.
-# KERNEL: stopped at time: 140 ns
-endsim
-# VSIM: Simulation has finished.
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0078: network.vhd : (55, 17): Unknown identifier "bias_1".
-# Error: COMP96_0133: network.vhd : (55, 17): Cannot find object declaration.
-# Error: COMP96_0077: network.vhd : (55, 17): Undefined type of expression. Expected type 'intermediate_output'.
-# Error: COMP96_0078: network.vhd : (57, 17): Unknown identifier "bias_2".
-# Error: COMP96_0133: network.vhd : (57, 17): Cannot find object declaration.
-# Error: COMP96_0077: network.vhd : (57, 17): Undefined type of expression. Expected type 'final_output'.
-# Error: COMP96_0078: network.vhd : (64, 61): Unknown identifier "weights_1".
-# Error: COMP96_0133: network.vhd : (64, 61): Cannot find object declaration.
-# Error: COMP96_0289: network.vhd : (64, 61): Prefix of index must be an array.
-# Error: COMP96_0104: network.vhd : (64, 51): Undefined type of expression.
-# Error: COMP96_0093: network.vhd : (64, 79): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.RESIZE(ARG : UNRESOLVED_SIGNED; SIZE_RES : UNRESOLVED_SIGNED) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (64, 30): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0090: network.vhd : (74, 9): Expected array type.
-# Error: COMP96_0077: network.vhd : (74, 8): Undefined type of expression. Expected type 'BOOLEAN'.
-# Error: COMP96_0077: network.vhd : (75, 22): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0093: network.vhd : (85, 34): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.SHIFT_RIGHT(ARG : UNRESOLVED_SIGNED; COUNT : NATURAL) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (85, 22): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0078: network.vhd : (94, 57): Unknown identifier "weights_2".
-# Error: COMP96_0133: network.vhd : (94, 57): Cannot find object declaration.
-# Error: COMP96_0289: network.vhd : (94, 57): Prefix of index must be an array.
-# Error: COMP96_0104: network.vhd : (94, 42): Undefined type of expression.
-# Error: COMP96_0093: network.vhd : (94, 75): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.RESIZE(ARG : UNRESOLVED_SIGNED; SIZE_RES : UNRESOLVED_SIGNED) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (94, 21): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0093: network.vhd : (103, 33): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.SHIFT_RIGHT(ARG : UNRESOLVED_SIGNED; COUNT : NATURAL) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (103, 21): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0093: network.vhd : (109, 33): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.SHIFT_RIGHT(ARG : UNRESOLVED_SIGNED; COUNT : NATURAL) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (109, 21): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# Error: COMP96_0078: fpga.vhd : (79, 48): Unknown identifier "image_0".
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile failure 28 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# Compile success 0 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# Error: COMP96_0019: final_proj_package.vhd : (15, 2): Keyword 'end' expected.
-# Error: COMP96_0111: final_proj_package.vhd : (15, 2): Labels do not match.
-# Error: COMP96_0015: final_proj_package.vhd : (15, 12): ';' expected.
-# Error: COMP96_0016: final_proj_package.vhd : (15, 14): Design unit declaration expected.
-# Error: COMP96_0018: final_proj_package.vhd : (933, 12): Identifier expected.
-# Compile failure 5 Errors 0 Warnings  Analysis time :  31.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# Compile success 0 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0753: network.vhd : (63, 41): Cannot find the "+" operator with operands denoted with the "[intermediate_output, INTEGER]" signature.
-# Error: COMP96_0077: network.vhd : (63, 30): Undefined type of expression. Expected type 'INTEGER'.
-# Error: COMP96_0078: network.vhd : (68, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (68, 5): Cannot find object declaration.
-# Error: COMP96_0078: network.vhd : (79, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (79, 5): Cannot find object declaration.
-# Error: COMP96_0078: network.vhd : (86, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (86, 5): Cannot find object declaration.
-# Error: COMP96_0093: network.vhd : (102, 33): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.SHIFT_RIGHT(ARG : UNRESOLVED_SIGNED; COUNT : NATURAL) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (102, 21): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0093: network.vhd : (108, 33): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.SHIFT_RIGHT(ARG : UNRESOLVED_SIGNED; COUNT : NATURAL) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (108, 21): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0078: network.vhd : (112, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (112, 5): Cannot find object declaration.
-# Compile failure 14 Errors 0 Warnings  Analysis time :  62.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0078: network.vhd : (68, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (68, 5): Cannot find object declaration.
-# Error: COMP96_0078: network.vhd : (79, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (79, 5): Cannot find object declaration.
-# Error: COMP96_0078: network.vhd : (86, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (86, 5): Cannot find object declaration.
-# Error: COMP96_0093: network.vhd : (102, 33): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.SHIFT_RIGHT(ARG : UNRESOLVED_SIGNED; COUNT : NATURAL) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (102, 21): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0093: network.vhd : (108, 33): The type of a parameter in a subprogram call does not match to a formal parameter of the "ieee.NUMERIC_STD.SHIFT_RIGHT(ARG : UNRESOLVED_SIGNED; COUNT : NATURAL) return UNRESOLVED_SIGNED" subprogram.
-# Error: COMP96_0617: network.vhd : (108, 21): Assignment target incompatible with right side. Cannot convert 'UNRESOLVED_SIGNED' to 'INTEGER'.
-# Error: COMP96_0078: network.vhd : (112, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (112, 5): Cannot find object declaration.
-# Compile failure 12 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0019: network.vhd : (83, 15): Keyword 'end' expected.
-# Error: COMP96_0019: network.vhd : (85, 5): Keyword 'case' expected.
-# Error: COMP96_0019: network.vhd : (86, 4): Keyword 'end' expected.
-# Error: COMP96_0019: network.vhd : (96, 4): Keyword 'end' expected.
-# Error: COMP96_0329: network.vhd : (98, 5): Generate statement must have a label.
-# Error: COMP96_0019: network.vhd : (98, 21): Keyword 'generate' expected.
-# Error: COMP96_0015: network.vhd : (100, 9): ';' expected.
-# Error: COMP96_0016: network.vhd : (100, 13): Design unit declaration expected.
-# Compile failure 8 Errors 0 Warnings  Analysis time :  63.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Error: COMP96_0078: network.vhd : (109, 5): Unknown identifier "o_1".
-# Error: COMP96_0133: network.vhd : (109, 5): Cannot find object declaration.
-# Compile failure 2 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/network.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# Compile success 0 Errors 0 Warnings  Analysis time :  78.0 [ms]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# Error: COMP96_0078: fpga.vhd : (79, 48): Unknown identifier "image_0".
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.2 [s]
-acom -O3 -e 100 -work network -2019  $dsn/src/final_proj_package.vhd $dsn/src/network.vhd $dsn/src/fpga.vhd $dsn/src/TestBench/fpga_TB.vhd
-# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/final_proj_package.vhd
-# Compile Package "project_package"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/network.vhd
-# Compile Entity "network"
-# Compile Architecture "network" of Entity "network"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/fpga.vhd
-# Compile Entity "fpga"
-# Compile Architecture "fpga" of Entity "fpga"
-# File: C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/TestBench/fpga_TB.vhd
-# Compile Entity "fpga_tb"
-# Compile Architecture "TB_ARCHITECTURE" of Entity "fpga_tb"
-# Compile Configuration "TESTBENCH_FOR_fpga"
-# Compile success 0 Errors 0 Warnings  Analysis time :  0.2 [s]
-asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-# ELBREAD: Elaboration process.
-# ELBREAD: Elaboration time 0.0 [s].
-# VSIM: Stack memory: 32MB
-# VSIM: Retval memory: 32MB
-# 
-# KERNEL: Main thread initiated.
-# KERNEL: Kernel process initialization phase.
-# ELAB2: Elaboration final pass...
-# ELAB2: Create instances ...
-# KERNEL: Time resolution set to 1ps.
-# ELAB2: Create instances complete.
-# SLP: Started
-# SLP: Elaboration phase ...
-# SLP: Elaboration phase ... skipped, nothing to simulate in SLP mode : 0.0 [s]
-# SLP: Finished : 0.0 [s]
-# ELAB2: Elaboration final pass complete - time: 0.0 [s].
-# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
-# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
-# KERNEL: Kernel process initialization done.
-# Allocation: Simulator allocated 5586 kB (elbread=256 elab2=5192 kernel=137 sdf=0)
-# KERNEL: ASDB file was created in location C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\wave.asdb
-#  7:41 PM, Tuesday, April 26, 2022
-#  Simulation has been initialized
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-# 4 object(s) traced.
-# Waveform file 'untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/wave.asdb'.
-run @140ns
-# EXECUTION:: NOTE   : State 0
-# EXECUTION:: Time: 10 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 1
-# EXECUTION:: Time: 30 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 2
-# EXECUTION:: Time: 50 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 3
-# EXECUTION:: Time: 70 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 4
-# EXECUTION:: Time: 90 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 5
-# EXECUTION:: Time: 110 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# EXECUTION:: NOTE   : State 6
-# EXECUTION:: Time: 130 ns,  Iteration: 1,  Instance: /fpga_tb/UUT/network,  Process: line__46.
-# KERNEL: stopped at time: 140 ns
-endsim
-# VSIM: Simulation has finished.
-# Waveform file 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/untitled.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/untitled.asdb'.
-# Adding file C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\untitled.asdb ... Done
-# Adding file C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\untitled.awc ... Done
-# Waveform file 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/untitle1d.awc' connected to 'C:/Users/Steph/Documents/GitHub/ece441final/final/network/src/untitle1d.asdb'.
-# Adding file C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\untitle1d.asdb ... Done
-# Adding file C:\Users\Steph\Documents\GitHub\ece441final\final\network\src\untitle1d.awc ... Done
+# EXECUTION:: Time: 10714 ns,  Iteration: 3,  Instance: /fpga_tb/UUT/network,  Process: line__46.
+# KERNEL: stopped at time: 11 us

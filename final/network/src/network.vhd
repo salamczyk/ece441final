@@ -41,6 +41,13 @@ architecture network of network is
 
 signal state: integer range 0 to 6;   
 
+--input [1x784] vector
+--multiply it by the [784x128] weight matrix
+--add the bias that is [1x128] long
+--every number that is less than zero is now zero
+--multiply it by the [128x10] weight matrix
+--add the bias that is [1x10] long
+--the index of the highest number is the predicted number
 begin
 	
 	process(clk)

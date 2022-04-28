@@ -1,8 +1,14 @@
-78
+84
+~M 0 "" 0 $root
+~A 1 "" 0 $root
 ~E 1 "../src/fpga.vhd" 30 fpga
 ~A 1 "../src/fpga.vhd" 50 fpga
 ~E 1 "../src/TestBench/fpga_TB.vhd" 12 fpga_tb
 ~A 1 "../src/TestBench/fpga_TB.vhd" 15 TB_ARCHITECTURE
 ~E 1 "../src/network.vhd" 30 network
 ~A 1 "../src/network.vhd" 39 network
+~E 1 "../MEGA/pll.vhd" 11 pll
+~A 1 "../MEGA/pll.vhd" 19 rtl
+~M 3 "../MEGA/pll/pll_0002.v" 2 pll_0002
+~A 1 "../MEGA/pll/pll_0002.v" 2 pll_0002
 ~C 1 "../src/TestBench/fpga_TB.vhd" 83 testbench_for_fpga

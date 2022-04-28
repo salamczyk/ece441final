@@ -2,3 +2,5 @@
 .\src\network.vhd
 .\src\fpga.vhd
 .\src\TestBench\fpga_TB.vhd
+.\MEGA\pll.vhd
+.\MEGA\pll\pll_0002.v

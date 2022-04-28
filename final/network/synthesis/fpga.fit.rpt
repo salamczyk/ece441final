@@ -1,5 +1,5 @@
 Fitter report for fpga
-Tue Apr 26 20:25:24 2022
+Wed Apr 27 14:42:37 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Apr 26 20:25:24 2022       ;
+; Fitter Status                   ; Successful - Wed Apr 27 14:42:37 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; fpga                                        ;
 ; Top-level Entity Name           ; fpga                                        ;
@@ -149,13 +149,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.01        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -2297,7 +2296,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[7]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:06
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'fpga.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -2328,9 +2327,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Users/Steph/Documents/GitHub/ece441final/final/network/synthesis/fpga.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 224 warnings
     Info: Peak virtual memory: 7784 megabytes
-    Info: Processing ended: Tue Apr 26 20:25:25 2022
-    Info: Elapsed time: 00:00:32
-    Info: Total CPU time (on all processors): 00:01:42
+    Info: Processing ended: Wed Apr 27 14:42:38 2022
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:01:30
 
 
 +----------------------------+

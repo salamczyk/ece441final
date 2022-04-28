@@ -1,43 +1,216 @@
-Active-HDL 12.0.118.7745 2022-04-26 19:41:15
+Active-HDL 12.0.118.7745 2022-04-27 20:24:44
 
 Elaboration top modules:
 VHDL Configuration            testbench_for_fpga
+SystemVerilog Package         altera_lnsim_functions
+SystemVerilog Package         altera_generic_pll_functions
 
 
---------------------------------------------------------------------------------------------
-Entity   | Architecture    | Library | Info | Compiler Version        | Compilation Options
---------------------------------------------------------------------------------------------
-fpga_tb  | TB_ARCHITECTURE | network |      | 12.0.118.7745 (Windows) | -O3 -2019
-fpga     | fpga            | network |      | 12.0.118.7745 (Windows) | -O3 -2019
-network  | network         | network |      | 12.0.118.7745 (Windows) | -O3 -2019
---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Entity                                                                                  | Architecture     | Library      | Info | Compiler Version        | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+fpga_tb                                                                                 | TB_ARCHITECTURE  | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
+fpga                                                                                    | fpga             | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
+pll                                                                                     | rtl              | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
+network                                                                                 | network          | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
+stratixv_lcell_comb                                                                     | vital_lcell_comb | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
+arriav_lcell_comb                                                                       | vital_lcell_comb | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
+arriavgz_lcell_comb                                                                     | vital_lcell_comb | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
+cyclonev_lcell_comb                                                                     | vital_lcell_comb | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
+twentynm_lcell_comb                                                                     | vital_lcell_comb | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -93
+twentynm_iopll                                                                          | behavior         | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -93
+alt_inbuf                                                                               | behavior         | altera       |      | 12.0.118.7745 (Windows) | -vendor Intel -93
+alt_outbuf                                                                              | behavior         | altera       |      | 12.0.118.7745 (Windows) | -vendor Intel -93
+alt_iobuf                                                                               | behavior         | altera       |      | 12.0.118.7745 (Windows) | -vendor Intel -93
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---------------------------------------------------------------------------------------------
-VHDL Configuration         | Library | Info | Compiler Version        | Compilation Options
---------------------------------------------------------------------------------------------
-testbench_for_fpga         | network |      |                         | <unavailable>
---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Verilog Module                                                                                             | Library      | Info | Compiler Version        | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pll_0002                                                                                                   | network      |      | 12.0.118.7745 (Windows) | -O2 -sv2k12
+altera_pll                                                                                                 | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+generic_pll                                                                                                | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+dps_pulse_gen                                                                                              | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+dps_extra_kick                                                                                             | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+dprio_init                                                                                                 | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+altera_pll_dps_lcell_comb                                                                                  | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+altera_stratixv_pll                                                                                        | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+protected_b8d7656adf1dd40f2d434db1c11ba7d61bbae960a1b544d099e4e9a4d171bff4                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_ce09a3c9ba79c25a3a7c26ed8c33be08                                                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_bcf2f843309de3e03cde538046100abb036bdbe8e78408e667644f7c621fd5a5                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_891d07d502bbf2b9a1615d9242ed8373206f3beca5be126afc4ba9f8e61e9c76                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_b8b61f270081c5d1b16ca5cc19fde07da0757b5aace96f8ea0f3324e5cf95734                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_6a201c5a7b5b774323f194c220561119a0757b5aace96f8ea0f3324e5cf95734                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_6ca8295f290ee27cdc2addf25096805d788f357b6d74b41d734f315022ae20a7                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_49e20871e0289307f907034c698411f3a0757b5aace96f8ea0f3324e5cf95734                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_6acca200ccd8443e9eb25073f80081225f1acbb66fbaae7fd49bc60f7b398a69                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_4c50263557a525dfe4779cf9ccf97fb3788f357b6d74b41d734f315022ae20a7                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_95bd6beea9d39413212ae8ee9730431d45b6e6987f32ab154b711a0082b51ea0                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_d01f1e1d486fbff0d6a14957f9926e3b3b41d7732744a98323ecb4e576dbdb455f1acbb66fbaae7fd49bc60f7b398a69 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_42d510d61c345839e1d8e8a6f761629f092113ed78bf0d956889946ae4a1f1b3                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_d01f1e1d486fbff0d6a14957f9926e3b4abfb12fbf060734312f3ccbd4ff6f40ad17ef2525c8f7db7c28fd3f6ccef5e2 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_1698efe46849d70f09cc2b0ac75994b8975aa2b0588926b7e353fa59517c42cc                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_05dcfc13b4dd09ca4960e4051d533f883d335f816b9664e80628cbe817d72f29                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_05dcfc13b4dd09ca4960e4051d533f88feb4059cbda0a71e2affdf6c88806804                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_5ecfa9b6505885667d342ee051de081d711cb2b7379fe8aa5790d109e7c4d297                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_9f64369ff39bde333a24d336ed63b9fd51f6c93556a31bd65dc26f6c91a0a07e                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_b9d7156dd0d3ae3705d735f5871aac4592af955dd7dba7e75f0ed6b49d7eb8f8                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_5ecfa9b6505885667d342ee051de081d990a3dc147a34d9fd6c820d45f8ecffe                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_5ecfa9b6505885667d342ee051de081dc34c05390bb7eb334a66ed9f9c2cd829                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_9f64369ff39bde333a24d336ed63b9fd3480872aba438710ef4eb024ca7d92ab                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_9f64369ff39bde333a24d336ed63b9fd24907cda3f15b796b58019432cae75ef                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_b9d7156dd0d3ae3705d735f5871aac45f478c32aede19f1b0246a4e2c500e556                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_b9d7156dd0d3ae3705d735f5871aac45e155412f627d64c0d1bb72536b158d5e                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_1698efe46849d70f09cc2b0ac75994b8e390216bb7d101c6988b6484d91ae95e                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_1698efe46849d70f09cc2b0ac75994b8e8e4d26da16c3d25a26a2e9daf21c7c4                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_fadca2f02be67c915e58609b94fdffc5788f357b6d74b41d734f315022ae20a7                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_166728823316e9d367d2141b4e0ea0b0788f357b6d74b41d734f315022ae20a7                                 | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+altera_arriav_pll                                                                                          | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+protected_9e78e7ca837f0d4071b3d798f0649e2a45b6e6987f32ab154b711a0082b51ea0                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_2a4672fedbe819e95012c4547ac16fb4ce09a3c9ba79c25a3a7c26ed8c33be08                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_1b67bbfc22d12415e501a5029c24ab4f29425799675795a3f06293f005315175                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_5d0709402d0c275f5a1727965f251489a0757b5aace96f8ea0f3324e5cf95734                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_0986860026a284c12e4aa8479d5107bd788f357b6d74b41d734f315022ae20a7                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_31c41a7d20564cb1ffdc61f8ceef12c8788f357b6d74b41d734f315022ae20a7                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_7b0ed3a0e79cb4d94db8e578cd506bda029c22a381757daa240a406a6ea3fc97                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_028d26462fc9e9d3e25b81c7b9420744788f357b6d74b41d734f315022ae20a7                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_b7651f5e9607555b0d44a1137fdb603d1bbae960a1b544d099e4e9a4d171bff4                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_f079163fa8e5687df19ac41d9ca22376029c22a381757daa240a406a6ea3fc97                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_3eea2d444a3dac06962f0234cd3e94e4c3c5e878a3436ebab52c1c9e7dd9b775                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_a292153e05e8b512b8bafacdcc5d53fa5c02fd9c658d3e87454df0eeb935af8d1bbae960a1b544d099e4e9a4d171bff4 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_a292153e05e8b512b8bafacdcc5d53fa3ba990eae73638a1af8575548b0692e9a0757b5aace96f8ea0f3324e5cf95734 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_bf700c7f7571e847aecbad16d6f31fe2029c22a381757daa240a406a6ea3fc97                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_119ab471de42a3f1f48e1ab0afe5043b029c22a381757daa240a406a6ea3fc97                                 | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+altera_arriavgz_pll                                                                                        | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+protected_705f31fe602776ef5e5d98d5ad958cb81bbae960a1b544d099e4e9a4d171bff4                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_62379939156c1930f350bab5ae13beb1036bdbe8e78408e667644f7c621fd5a5                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_48a6d91e128e98b83ba7cbb8e6d9b112206f3beca5be126afc4ba9f8e61e9c76                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_3ed3665303cd78425fedce354a86a282a0757b5aace96f8ea0f3324e5cf95734                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_dad34cb52802d22a580028c7daba0abba0757b5aace96f8ea0f3324e5cf95734                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_1da3800a32089de39bf2f5a4147b434f788f357b6d74b41d734f315022ae20a7                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_06ab9f1b8ef0f74fbfecb706fd53f26aa0757b5aace96f8ea0f3324e5cf95734                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_55a8d44b1a97076ae187eeb4263f93fd5f1acbb66fbaae7fd49bc60f7b398a69                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_0be1321f4ea72f665fba7d6ac21b02c1788f357b6d74b41d734f315022ae20a7                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_6b24d9579f2d8942a1ea3cece378220545b6e6987f32ab154b711a0082b51ea0                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_6f7519e171233213fa27019b87bdd9b53b41d7732744a98323ecb4e576dbdb455f1acbb66fbaae7fd49bc60f7b398a69 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_6f7519e171233213fa27019b87bdd9b54abfb12fbf060734312f3ccbd4ff6f40ad17ef2525c8f7db7c28fd3f6ccef5e2 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_b4621781cde802f88a6b02f14ce88d89788f357b6d74b41d734f315022ae20a7                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_3cd83dd214063c7e2ad4fd45e2fc8d55788f357b6d74b41d734f315022ae20a7                                 | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+altera_cyclonev_pll                                                                                        | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+protected_0dcaaf64936b7f5bb62aca7fa9ba21731bbae960a1b544d099e4e9a4d171bff4                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_e7f4df8b85510d41efec16b3a06d600f0bc33a756960123ee44806f42b68a0c9                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_a73acde71872ac98ec09e38cd4d098c9036bdbe8e78408e667644f7c621fd5a5                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_b846f27f2bdcab372d460d8c295c8427206f3beca5be126afc4ba9f8e61e9c76                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_41fb1821903fc8ecb06f7688b37a2b54a0757b5aace96f8ea0f3324e5cf95734                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_f2bfb9b6fa80ca6979ae2bb4afd81b65a0757b5aace96f8ea0f3324e5cf95734                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_c00b64ab5f3abc353ee1c880a32d3df4788f357b6d74b41d734f315022ae20a7                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_33a7e6fc0ddc0283676dcd0bca16072ba0757b5aace96f8ea0f3324e5cf95734                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_7a36e53ea79efecb92bcb12dcecd06f0a0757b5aace96f8ea0f3324e5cf95734                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_0968811b56827608edce31f8825991ce788f357b6d74b41d734f315022ae20a7                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_14ae29e48de95ffc66b86fd01ee144dd45b6e6987f32ab154b711a0082b51ea0                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_5febb824be150a2222cc66c4a07f34593b41d7732744a98323ecb4e576dbdb455f1acbb66fbaae7fd49bc60f7b398a69 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_5febb824be150a2222cc66c4a07f34594abfb12fbf060734312f3ccbd4ff6f40ad17ef2525c8f7db7c28fd3f6ccef5e2 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_4239b1d4d27b92c7a7455614b21eb3bd788f357b6d74b41d734f315022ae20a7                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+protected_d9eab436b22907f17da548e425a1b05a788f357b6d74b41d734f315022ae20a7                                 | cyclonev     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k
+twentynm_iopll_ip                                                                                          | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+protected_d087ffc060e56ab74fce892228f435377bab5f3ddb1ee651cda139884d5206b5                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_c2e35560aa85bcc3afbd1d92298d57052bf58bccae69bdecfbbbb9c0a9b13c91                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_70e42a15c3981044a11784437d315a35d2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_a09d0d019e1d69871dfd37935f157194                                                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_05bbd3585da9a927d2bb0f2c1a592082136f164d68fccb26d9170fbb13dbe038                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_2b0087f40e9741d22b1bca20f320f2ebef143b96b1713cd2165dc992b0917b1a                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_122b2dd1045e2db7dec1bd6515e53607ef143b96b1713cd2165dc992b0917b1a                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_55617aecb93b30d2a79102adce47ab6bd2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_16758f1268cd1a0ff00e64d6566cd4e4feb4059cbda0a71e2affdf6c88806804                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_218402724534ffc6678a207367890a1d136f164d68fccb26d9170fbb13dbe038                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_a02c4a78ed11177036f3a92fd72c654dfeb4059cbda0a71e2affdf6c88806804                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_13f9af0bdeb27ce2c3ea23de23f14e7ea6e609a1c3886886ef41cce1117117d4                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_7f1b9a7a260b1dd7f6ddbc3d8666eba6feb4059cbda0a71e2affdf6c88806804                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_d4445975aa2e8f0e2929687623f8db7ed2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1e50f95b1022418bb77882d37c4cdfa6                                                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_3407c0a0ba73445522ff50ba74415365                                                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_0bfb4d229118ec73a6b933977eb7a633ef143b96b1713cd2165dc992b0917b1a                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_3743c112c7188ca5e90989d0c7c83d0b970ec5417a6975d4fa9170f0edfc8d8d                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_f8767acce3ba4717329ccb02c87293e8                                                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_b880ed37db581d277ecc5e4205e26bbaf6318135cad69cbcf61156a20a2266e7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_7cb6107fd71ce40d5c9511168788c242d2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_35513d9a321e21d734d01c437e92caa7970ec5417a6975d4fa9170f0edfc8d8d                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_c05cf816b47b2f9117710f9d8a40996d                                                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_c22a5f5013f425338603e526e7baf4f7d2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_7ecb6674a02fc2a3b6103acc52524f45a6e609a1c3886886ef41cce1117117d4                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_3680cf9435536658687c2991d54ccc64b529546f8c59726f4b37b44bb1ebe511                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_cf516f982ce9e5971c4873aa41ac667bf62bc89e15705e65ec2803fa44d2fa46                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_7833241db5643c0f01e80a1870546460970ec5417a6975d4fa9170f0edfc8d8d                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_a50ec830021a2295a1d25bfdff119270ef143b96b1713cd2165dc992b0917b1a                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_30fb9cb302bd348af9770b67fc0c9278feb4059cbda0a71e2affdf6c88806804                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_d94d2018bff1b64981d3f4bc13334682d2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_64aa755c985f1d3511381398e4883b59d2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1cb94221f6a1c178d9c9ff5f4a47fc77b529546f8c59726f4b37b44bb1ebe511                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_754a6a61c84b6090d20fb0e2b1562797c4a39c203e1885b7ea16ba07f43557c1                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_5f7ffae7c0cc758d70d991011dbfa5ccc4a39c203e1885b7ea16ba07f43557c1                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_c3ba2839f88b63f1dc39af431aa5d5b5d2496ba05e63a3793c20fc03428b20d7                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_bd176be61e99468d212ce7822065a532d0e6ff6c9dda56fa51b784f1b0b317f4                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_f0cb538ea92316972499567c8f8ed001b529546f8c59726f4b37b44bb1ebe511                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b83b41d7732744a98323ecb4e576dbdb45b529546f8c59726f4b37b44bb1ebe511 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_816f1426084ca9b29e58e08806408943                                                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b84abfb12fbf060734312f3ccbd4ff6f40f6318135cad69cbcf61156a20a2266e7 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b80b40793a84184d64b4819b73826a10d4d2496ba05e63a3793c20fc03428b20d7 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_42d510d61c345839e1d8e8a6f761629ff5c4e7e385bdaab4c232de1fdeee5e02136f164d68fccb26d9170fbb13dbe038 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_05dcfc13b4dd09ca4960e4051d533f88b224c77ebe728afeee248293e1f81d1d                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_05dcfc13b4dd09ca4960e4051d533f88b529546f8c59726f4b37b44bb1ebe511                                 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b82bfdd452db2d4cfde6b0bea276f223c8ef143b96b1713cd2165dc992b0917b1a | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_9f64369ff39bde333a24d336ed63b9fdf7b3e9a4df2537a097066cebaadef2c9d0e6ff6c9dda56fa51b784f1b0b317f4 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_b9d7156dd0d3ae3705d735f5871aac45e73b96972eb324e25f4e9dff1978b203136f164d68fccb26d9170fbb13dbe038 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b8da20b5f1ca093d35f506cbff19e583a4ef143b96b1713cd2165dc992b0917b1a | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b8eae68432c7a895aa1b8bd3187a451828136f164d68fccb26d9170fbb13dbe038 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_9f64369ff39bde333a24d336ed63b9fd9cc90069445f4c010539d3a5ad3caafad0e6ff6c9dda56fa51b784f1b0b317f4 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_9f64369ff39bde333a24d336ed63b9fd002b483c7d66ba8f1b263fdcc135570fd0e6ff6c9dda56fa51b784f1b0b317f4 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_b9d7156dd0d3ae3705d735f5871aac45f6337c6d9b95bbe27418ad001ceee16b136f164d68fccb26d9170fbb13dbe038 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b8f7381fc958d62003a35c489c83cbd4ced2496ba05e63a3793c20fc03428b20d7 | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+protected_1698efe46849d70f09cc2b0ac75994b869032084334964f5e49a04fbf58299a9970ec5417a6975d4fa9170f0edfc8d8d | twentynm     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -v2k5
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---------------------------------------------------------------------------------------------
-VHDL Package               | Library | Info | Compiler Version        | Compilation Options
---------------------------------------------------------------------------------------------
-standard                   | std     |      |                         | <unavailable>
-TEXTIO                     | std     |      |                         | <unavailable>
-std_logic_1164             | ieee    |      |                         | <unavailable>
-NUMERIC_STD                | ieee    |      |                         | <unavailable>
-project_package            | network |      |                         | <unavailable>
---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SystemVerilog Package                                                                                      | Library      | Info | Compiler Version        | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+altera_lnsim_functions                                                                                     | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+altera_generic_pll_functions                                                                               | altera_lnsim |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -sv2k5
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
---------------------------------------------------------------------------------------------
-Library                    | Comment
---------------------------------------------------------------------------------------------
-ieee                       | Standard IEEE packages library
-network                    | None
-std                        | Standard VHDL library
---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VHDL Configuration                                                                                         | Library      | Info | Compiler Version        | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+testbench_for_fpga                                                                                         | network      |      |                         | <unavailable>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VHDL Package                                                                                               | Library      | Info | Compiler Version        | Compilation Options
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+standard                                                                                                   | std          |      |                         | <unavailable>
+TEXTIO                                                                                                     | std          |      |                         | <unavailable>
+std_logic_1164                                                                                             | ieee         |      |                         | <unavailable>
+NUMERIC_STD                                                                                                | ieee         |      |                         | <unavailable>
+project_package                                                                                            | network      |      |                         | <unavailable>
+VITAL_Timing                                                                                               | ieee         |      |                         | <unavailable>
+VITAL_Primitives                                                                                           | ieee         |      |                         | <unavailable>
+stratixv_atom_pack                                                                                         | stratixv     |      |                         | <unavailable>
+arriav_atom_pack                                                                                           | arriav       |      |                         | <unavailable>
+arriavgz_atom_pack                                                                                         | arriavgz     |      |                         | <unavailable>
+cyclonev_atom_pack                                                                                         | cyclonev     |      |                         | <unavailable>
+twentynm_atom_pack                                                                                         | twentynm     |      |                         | <unavailable>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Simulation Options: asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
-
-
-The performance of simulation is reduced. Version EDU Edition
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Library                                                                                                    | Comment
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+altera                                                                                                     | Intel FPGA Quartus Prime Standard 20.1.1, ALTERA VHDL library
+altera_lnsim                                                                                               | Intel FPGA Quartus Prime Standard 20.1.1, ALTERA_LNSIM VHDL library
+arriav                                                                                                     | Intel FPGA Quartus Prime Standard 20.1.1, ARRIAV VHDL library
+arriavgz                                                                                                   | Intel FPGA Quartus Prime Standard 20.1.1, ARRIAVGZ VHDL library
+cyclonev                                                                                                   | Intel FPGA Quartus Prime Standard 20.1.1, CYCLONEV VHDL library
+ieee                                                                                                       | Standard IEEE packages library
+network                                                                                                    | None
+std                                                                                                        | Standard VHDL library
+stratixv                                                                                                   | Intel FPGA Quartus Prime Standard 20.1.1, STRATIXV VHDL library
+twentynm                                                                                                   | Intel FPGA Quartus Prime Standard 20.1.1, TWENTYNM VHDL library
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -124,8 +124,10 @@ set_global_assignment -name ALLOW_REGISTER_MERGING ON
 set_global_assignment -name ALLOW_REGISTER_DUPLICATION ON
 set_global_assignment -name ALLOW_REGISTER_RETIMING ON
 set_global_assignment -name ENABLE_REDUCED_MEMORY_MODE OFF
-set_global_assignment -name USER_LIBRARIES "C:/Users/Steph/Documents/GitHub/ece441final/final/network/src"
+set_global_assignment -name USER_LIBRARIES "C:/Users/Steph/Documents/GitHub/ece441final/final/network/src;C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA"
 set_global_assignment -name VHDL_FILE "./../src/fpga.vhd"
 set_global_assignment -name VHDL_FILE "./../src/final_proj_package.vhd"
 set_global_assignment -name VHDL_FILE "./../src/network.vhd"
+set_global_assignment -name VHDL_FILE "./../MEGA/pll.vhd"
+set_global_assignment -name VERILOG_FILE "./../MEGA/pll/pll_0002.v"
 set_global_assignment -name TOP_LEVEL_ENTITY fpga

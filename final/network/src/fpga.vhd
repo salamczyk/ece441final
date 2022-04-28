@@ -75,8 +75,12 @@ function hexToSegments(h:unsigned(3 downto 0)) return std_logic_vector is
 	end function;
 	
 	signal output: final_output;
-begin 
-	network: entity work.network port map (img => image_0, clk => CLOCK_50, output => output); 
+	
+	signal networkclock: std_logic;
+begin
+	
+	thepll: entity work.pll port map (CLOCK_50, '0', networkclock);  
+	network: entity work.network port map (img => image_0, clk => networkclock, output => output); 
 	
 
 	 -- enter your statements here --
