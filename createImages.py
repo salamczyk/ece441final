@@ -39,9 +39,9 @@ def showNums(image_d):
     for num in image_d:
         image = x_train[image_d[num]]
         imgplot = plt.imshow(image)
-        plt.show()
         imageFile = 'images/image%s.png' % num
         plt.savefig(imageFile)
+        plt.show()
         image = (image / 255 ) * 256
         image = image.flatten().astype(int)
         imageTxt = 'images/image%s.txt' % num
