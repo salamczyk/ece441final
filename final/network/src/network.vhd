@@ -54,8 +54,8 @@ begin
 	process(clk)
 	variable output_1: intermediate_output;
 	variable output_2: final_output;
-	variable i1: integer range 0 to 127:=0;
-        variable j1 : integer range 0 to 783:=0;
+	variable i1: integer range 0 to 128:=0;
+        variable j1 : integer range 0 to 784:=0;
 	-- variable r1: integer range 0 to 783:=0;
         -- variable r2: integer range 0 to 783:=97;
 	begin	
@@ -69,15 +69,17 @@ begin
 				state <= 1;
 			
 			when 1 =>
-				report("State 1");
-                                output_1(i1) := output_1(i1) + img(j1) * weights_1(j1, i1); 
+			report("State 1"); 
+				if(i1 < 128 and j1 < 784) then
+					output_1(i1) := output_1(i1) + img(j1) * weights_1(j1, i1); 
+				end if;
 					--report(integer'image(j));
-				if i1 = 127 then
+				if i1 = 128 then
                                   i1 := 0;
                                   j1 := 0;
                                   state <= 2;
 				else
-                                  if j1 = 783 then
+                                  if j1 = 784 then
                                     j1 := 0;
                                     i1 := i1 + 1;
                                   else
@@ -88,11 +90,13 @@ begin
 				
 			when 2 => 	
 				report("State 2");
-				if(output_1(i1) < 0) then
-					output_1(i1) := 0;
+				if(i1 < 128) then
+					if(output_1(i1) < 0) then
+						output_1(i1) := 0;
+					end if;
 				end if;
 				
-				if i1 = 127 then
+				if i1 = 128 then
 					i1 := 0;
 					state <= 3;
 				else
@@ -102,10 +106,12 @@ begin
 				
 			when 3 => 	
 				report("State 3"); 
-				--output_1(i1) :=  output_1(i1) / 256;
-				output_1(i1) := to_integer(shift_right(to_signed(output_1(i1), 32), 8));
+				--output_1(i1) :=  output_1(i1) / 256; 
+				if(i1 < 128) then
+					output_1(i1) := to_integer(shift_right(to_signed(output_1(i1), 32), 8));
+				end if;
 				
-				if i1 = 127 then
+				if i1 = 128 then
 					i1 := 0;
 					state <= 4;
 				else
@@ -114,14 +120,16 @@ begin
 				end if; 
 				
 			when 4 =>	
-				report("State 4");
-                                output_2(i1) := output_2(i1) + output_1(j1) * weights_2(j1, i1); 
+			report("State 4");
+			if( i1 < 10 and j1 < 128) then 
+				output_2(i1) := output_2(i1) + output_1(j1) * weights_2(j1, i1);
+			end if;
                                         --report(integer'image(j));
-                                if i1 >= 9 then
+                                if i1 = 10 then
                                   i1 := 0;
                                   state <= 5;
                                 else
-                                  if j1 >= 127 then
+                                  if j1 = 128 then
                                     j1 := 0;
                                     i1 := i1 + 1;
                                   else

@@ -36,14 +36,14 @@ fileopenfolder=C:\Users\Steph\Documents\GitHub\ece441final\final\network\src
 [IMPLEMENTATION]
 UCF=
 DEVICE_TECHNOLOGY_MIGRATION_LIST=
-LAST_RUN=1651361918
+LAST_RUN=1651436309
 
 [SpecTracer]
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=fpga_tb|testbench_for_fpga|1 
-ShowHide=ShowAll
+HierarchyInformation=fpga_tb|testbench_for_fpga|1  
+ShowHide=ShowTopLevel
 Selected=
 
 [Groups]
@@ -80,7 +80,7 @@ OUTPUT_IO_TIMING_NEAR_END_VMEAS_RISE=Half Signal Swing
 OUTPUT_IO_TIMING_NEAR_END_VMEAS_FALL=Half Signal Swing
 OUTPUT_IO_TIMING_FAR_END_VMEAS_RISE=Half Signal Swing
 OUTPUT_IO_TIMING_FAR_END_VMEAS_FALL=Half Signal Swing
-LAST_RUN=1651361918
+LAST_RUN=1651436309
 
 [Files]
 /final_proj_package.vhd=-1

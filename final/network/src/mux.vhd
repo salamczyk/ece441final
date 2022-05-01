@@ -52,8 +52,8 @@ begin
 	begin
 		val <= to_signed(value,32);
 		case S is
-			when '1' => sendOut(15 downto 0) <= val(31 downto 16);
-			when others => sendOut(15 downto 0) <= val(15 downto 0);
+			when '1' => sendOut <= val(31 downto 8);
+			when others => sendOut <= val(23 downto 0);
 		end case; 
 		  
 	end process;

@@ -70,7 +70,7 @@ begin
 		);
 
 	-- Add your stimulus here ...
-	SW(8 downto 5) <= "0000";
+	SW(8 downto 5) <= "1001";
 	SW(4 downto 0) <= "00000";
 	process
 	begin

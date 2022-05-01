@@ -2,7 +2,7 @@ MESSAGE "Pass 1. Scanning modules hierarchy."
 MESSAGE_SP VCP2113 "Module \$root found in current working library."
 BEGINPROGRESS Compiling...
 UPDATEPROGRESS 35
-WARNING VCP2515 "Undefined module: altera_pll was used. Port connection rules will not be checked at such instantiations." "C:/Users/Jacob/Documents/ECE441/ece441final/final/network/MEGA/pll/pll_0002.v" 85  7
+WARNING VCP2515 "Undefined module: altera_pll was used. Port connection rules will not be checked at such instantiations." "C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA/pll/pll_0002.v" 85  7
 MESSAGE "Pass 2. Processing instantiations."
 UPDATEPROGRESS 45
 MESSAGE "Pass 3. Processing behavioral statements."

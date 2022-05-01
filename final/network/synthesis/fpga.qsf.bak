@@ -1,6 +1,5 @@
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY fpga
 set_global_assignment -name SMART_RECOMPILE OFF
 set_global_assignment -name SAVE_DISK_SPACE ON
 set_global_assignment -name OPTIMIZATION_TECHNIQUE BALANCED
@@ -125,10 +124,18 @@ set_global_assignment -name ALLOW_REGISTER_DUPLICATION ON
 set_global_assignment -name ALLOW_REGISTER_RETIMING ON
 set_global_assignment -name ENABLE_REDUCED_MEMORY_MODE OFF
 set_global_assignment -name USER_LIBRARIES "C:/Users/Steph/Documents/GitHub/ece441final/final/network/src;C:/Users/Steph/Documents/GitHub/ece441final/final/network/MEGA"
-set_global_assignment -name VHDL_FILE "./../src/fpga.vhd"
-set_global_assignment -name VHDL_FILE "./../src/final_proj_package.vhd"
-set_global_assignment -name VHDL_FILE "./../src/network.vhd"
-set_global_assignment -name VHDL_FILE "./../MEGA/pll.vhd"
-set_global_assignment -name VERILOG_FILE "./../MEGA/pll/pll_0002.v"
-set_global_assignment -name VHDL_FILE "./../src/mux.vhd"
 set_global_assignment -name TOP_LEVEL_ENTITY fpga
+
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VHDL_FILE ./../src/fpga.vhd
+set_global_assignment -name VHDL_FILE ./../src/final_proj_package.vhd
+set_global_assignment -name VHDL_FILE ./../src/network.vhd
+set_global_assignment -name VHDL_FILE ./../MEGA/pll.vhd
+set_global_assignment -name VERILOG_FILE ./../MEGA/pll/pll_0002.v
+set_global_assignment -name VHDL_FILE ./../src/mux.vhd
