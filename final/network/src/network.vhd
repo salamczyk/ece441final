@@ -55,6 +55,9 @@ begin
 	variable output_1: intermediate_output;
 	variable output_2: final_output;
 	variable i1: integer range 0 to 127:=0;
+        variable j1 : integer range 0 to 783:=0;
+	-- variable r1: integer range 0 to 783:=0;
+        -- variable r2: integer range 0 to 783:=97;
 	begin	
 		if(rising_edge(clk)) then
 		case state is
@@ -67,16 +70,20 @@ begin
 			
 			when 1 =>
 				report("State 1");
-        		for j in 0 to 783 loop
-            		output_1(i1) := output_1(i1) + img(j) * weights_1(j, i1); 
+                                output_1(i1) := output_1(i1) + img(j1) * weights_1(j1, i1); 
 					--report(integer'image(j));
-        		end loop;
 				if i1 = 127 then
-					i1 := 0;
-					state <= 2;
+                                  i1 := 0;
+                                  j1 := 0;
+                                  state <= 2;
 				else
-					i1 := i1 + 1;
-					state <= 1;
+                                  if j1 = 783 then
+                                    j1 := 0;
+                                    i1 := i1 + 1;
+                                  else
+                                    j1 := j1 + 1;
+                                  end if;
+                                  state <= 1; 
 				end if; 
 				
 			when 2 => 	
