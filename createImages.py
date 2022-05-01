@@ -13,7 +13,8 @@ length = len(x_train)
 random.seed(0)
 
 # From manually picking images using `searchNums` function
-image_d = {'1':40101,
+image_d = {'0':1,
+           '1':40101,
            '2':59621,
            '3':49673,
            '4':58906,
@@ -52,3 +53,4 @@ def showNums(image_d):
             f.write(")")
 
 showNums(image_d)
+#searchNums()
