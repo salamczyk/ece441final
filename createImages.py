@@ -5,12 +5,13 @@ import tensorflow_datasets as tfds
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import random
+import time
 
 (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 print(len(x_train))
 length = len(x_train)
 
-random.seed(0)
+random.seed(time.time())
 
 # From manually picking images using `searchNums` function
 image_d = {'0':1,
@@ -52,5 +53,28 @@ def showNums(image_d):
                 f.write(str(image[i]) + ",")
             f.write(")")
 
-showNums(image_d)
+def combineImages(image_d):
+    length = len(image_d)
+    rows = 2
+    cols = int(length/rows)
+    fig, ax = plt.subplots(nrows=rows, ncols=cols, figsize=(16,16))
+
+    counter = 0
+    for i in range(rows):
+        for j in range(cols):
+            ax[i][j].imshow(x_train[image_d[str(counter)]])
+            ax[i][j].axis('off')
+            counter += 1
+            #    fig.tight_layout()
+    plt.subplots_adjust(wspace=0.01, hspace=-0.7)
+    plt.savefig('report/sample_images.png')
+    plt.show()
+
+#showNums(image_d)
+
+# images = []
+# for i in range(10):
+#     images.append('images/image%s.png' % i)
+
+combineImages(image_d)
 #searchNums()
