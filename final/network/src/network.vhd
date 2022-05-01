@@ -39,7 +39,8 @@ end network;
 architecture network of network is
 
 
-signal state: integer range 0 to 6;   
+signal state: integer range 0 to 6;
+--signal i1: integer range 0 to 127:=0;
 
 --input [1x784] vector
 --multiply it by the [784x128] weight matrix
@@ -53,6 +54,7 @@ begin
 	process(clk)
 	variable output_1: intermediate_output;
 	variable output_2: final_output;
+	variable i1: integer range 0 to 127:=0;
 	begin	
 		if(rising_edge(clk)) then
 		case state is
@@ -65,51 +67,70 @@ begin
 			
 			when 1 =>
 				report("State 1");
-				for i in 0 to 127 loop
-	        		for j in 0 to 783 loop
-	            	output_1(i) := output_1(i) + img(j) * weights_1(j, i); 
+        		for j in 0 to 783 loop
+            		output_1(i1) := output_1(i1) + img(j) * weights_1(j, i1); 
 					--report(integer'image(j));
-	        		end loop;
-				end loop;
-	    		state <= 2;	 
+        		end loop;
+				if i1 = 127 then
+					i1 := 0;
+					state <= 2;
+				else
+					i1 := i1 + 1;
+					state <= 1;
+				end if; 
 				
 			when 2 => 	
 				report("State 2");
-				for j in 0 to 127 loop
-					if(output_1(j) < 0) then
-						output_1(j) := 0;
-					end if;
-				end loop;  
+				if(output_1(i1) < 0) then
+					output_1(i1) := 0;
+				end if;
 				
-				state <= 3;	
+				if i1 = 127 then
+					i1 := 0;
+					state <= 3;
+				else
+					i1 := i1 + 1;
+					state <= 2;
+				end if; 	
 				
 			when 3 => 	
-				report("State 3");
-				for j in 0 to 127 loop 
-					output_1(j) :=  output_1(j) / 256;
-				end loop;
+				report("State 3"); 
+				--output_1(i1) :=  output_1(i1) / 256;
+				output_1(i1) := to_integer(shift_right(to_signed(output_1(i1), 32), 8));
 				
-				state <= 4; 
+				if i1 = 127 then
+					i1 := 0;
+					state <= 4;
+				else
+					i1 := i1 + 1;
+					state <= 3;
+				end if; 
+				
 			when 4 =>	
 				report("State 4");
-				for i in 0 to 9 loop
 					for j in 0 to 127 loop
-					output_2(i) := output_2(i) + output_1(j) * weights_2(j, i); 
-					--report(integer'image(j));
+						output_2(i1) := output_2(i1) + output_1(j) * weights_2(j, i1); 
+						--report(integer'image(j));
 					end loop;
-				end loop;
-				
-				state <= 5;
+					if i1 >= 9 then
+						i1 := 0;
+						state <= 5;
+					else
+						i1 := i1 + 1;
+						state <= 4;
+					end if;
 			when 5 => 	
 				report("State 5");
 				for j in 0 to 9 loop
-					output_2(j) := output_2(j) / 256;
+					--output_2(j) := output_2(j) / 256;
+					output_2(j) := to_integer(shift_right(to_signed(output_2(j), 32), 8));
 				end loop;
 				state <= 6;  
 			when 6 => 	   
 				report("State 6");
 				for j in 0 to 9 loop
-					output_2(j) := output_2(j) / 256;
+					--output_2(j) := output_2(j) / 256;
+					output_2(j) := to_integer(shift_right(to_signed(output_2(j), 32), 8));
 				end loop;
 				state <= 0;	
 				output <= output_2;	 

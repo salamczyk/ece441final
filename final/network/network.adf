@@ -43,7 +43,7 @@ WindowVisible=0
 
 [HierarchyViewer]
 HierarchyInformation=fpga_tb|testbench_for_fpga|1 
-ShowHide=ShowTopLevel
+ShowHide=ShowAll
 Selected=
 
 [Groups]
@@ -91,6 +91,10 @@ LAST_RUN=1651361918
 /untitled.awc=-1
 /untitle1d.asdb=-1
 /untitle1d.awc=-1
+/test0.asdb=-1
+/test0.awc=-1
+/test0_1.asdb=-1
+/test0_1.awc=-1
 TestBench/fpga_TB.vhd=-1
 TestBench/fpga_TB_runtest.do=-1
 MEGA/..\..\MEGA\pll.vhd=-1
@@ -106,6 +110,10 @@ MEGA\pll/..\..\..\MEGA\pll\pll_0002.v=-1
 .\src\untitled.awc=Accelerated Waveform Configuration
 .\src\untitle1d.asdb=Accelerated Waveform File
 .\src\untitle1d.awc=Accelerated Waveform Configuration
+.\src\test0.asdb=Accelerated Waveform File
+.\src\test0.awc=Accelerated Waveform Configuration
+.\src\test0_1.asdb=Accelerated Waveform File
+.\src\test0_1.awc=Accelerated Waveform Configuration
 .\src\TestBench\fpga_TB.vhd=VHDL Test Bench
 .\src\TestBench\fpga_TB_runtest.do=Macro
 .\MEGA\pll.vhd=VHDL SOURCE CODE
