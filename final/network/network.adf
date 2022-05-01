@@ -31,17 +31,18 @@ ON_SERVERFARM_SIM=0
 SYNTH_STATUS=none
 IMPL_STATUS=none
 VerilogDirsChanged=0
+fileopenfolder=C:\Users\Steph\Documents\GitHub\ece441final\final\network\src
 
 [IMPLEMENTATION]
 UCF=
 DEVICE_TECHNOLOGY_MIGRATION_LIST=
-LAST_RUN=1651105786
+LAST_RUN=1651361918
 
 [SpecTracer]
 WindowVisible=0
 
 [HierarchyViewer]
-HierarchyInformation=fpga_tb|testbench_for_fpga|1  
+HierarchyInformation=fpga_tb|testbench_for_fpga|1 
 ShowHide=ShowTopLevel
 Selected=
 
@@ -79,11 +80,12 @@ OUTPUT_IO_TIMING_NEAR_END_VMEAS_RISE=Half Signal Swing
 OUTPUT_IO_TIMING_NEAR_END_VMEAS_FALL=Half Signal Swing
 OUTPUT_IO_TIMING_FAR_END_VMEAS_RISE=Half Signal Swing
 OUTPUT_IO_TIMING_FAR_END_VMEAS_FALL=Half Signal Swing
-LAST_RUN=1651105786
+LAST_RUN=1651361918
 
 [Files]
 /final_proj_package.vhd=-1
 /network.vhd=-1
+/mux.vhd=-1
 /fpga.vhd=-1
 /untitled.asdb=-1
 /untitled.awc=-1
@@ -91,13 +93,14 @@ LAST_RUN=1651105786
 /untitle1d.awc=-1
 TestBench/fpga_TB.vhd=-1
 TestBench/fpga_TB_runtest.do=-1
-MEGA/..\..\MEGA\pll.cmp=-1
 MEGA/..\..\MEGA\pll.vhd=-1
+MEGA/..\..\MEGA\pll.cmp=-1
 MEGA\pll/..\..\..\MEGA\pll\pll_0002.v=-1
 
 [Files.Data]
 .\src\final_proj_package.vhd=VHDL Source Code
 .\src\network.vhd=VHDL Source Code
+.\src\mux.vhd=VHDL Source Code
 .\src\fpga.vhd=VHDL Source Code
 .\src\untitled.asdb=Accelerated Waveform File
 .\src\untitled.awc=Accelerated Waveform Configuration
@@ -105,7 +108,7 @@ MEGA\pll/..\..\..\MEGA\pll\pll_0002.v=-1
 .\src\untitle1d.awc=Accelerated Waveform Configuration
 .\src\TestBench\fpga_TB.vhd=VHDL Test Bench
 .\src\TestBench\fpga_TB_runtest.do=Macro
-.\MEGA\pll.cmp=EXTERNAL FILE
 .\MEGA\pll.vhd=VHDL SOURCE CODE
+.\MEGA\pll.cmp=EXTERNAL FILE
 .\MEGA\pll\pll_0002.v=VERILOG SOURCE CODE
 

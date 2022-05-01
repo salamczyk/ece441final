@@ -3,3 +3,4 @@ i<>.\src\final_proj_package.vhd
 i<>.\src\network.vhd
 i<>.\MEGA\pll.vhd
 i<>.\MEGA\pll\pll_0002.v
+i<>.\src\mux.vhd

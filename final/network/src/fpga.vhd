@@ -77,10 +77,77 @@ function hexToSegments(h:unsigned(3 downto 0)) return std_logic_vector is
 	signal output: final_output;
 	
 	signal networkclock: std_logic;
+	
+	signal currentinteger: integer;	
+	
+	signal currentimage: image;
 begin
 	
 	thepll: entity work.pll port map (CLOCK_50, '0', networkclock);  
-	network: entity work.network port map (img => image_0, clk => networkclock, output => output); 
+	network: entity work.network port map (img => currentimage, clk => networkclock, output => output); 
+	mux: entity work.mux port map(value => currentinteger, S => SW(4), DISP0 => HEX0, DISP1 => HEX1, DISP2 => HEX2, DISP3 => HEX3, DISP4 => HEX4, DISP5 => HEX5);
+		
+		
+	process(networkclock)
+	begin
+		if(rising_edge(networkclock)) then
+			case SW(3 downto 0) is 
+				when "0000" =>
+					currentinteger <= output(0);
+				when "0001" =>
+					currentinteger <= output(1);
+				when "0010" => 
+					currentinteger <= output(2);
+				when "0011" =>	 
+					currentinteger <= output(3);
+				when "0100" =>	 
+					currentinteger <= output(4);
+				when "0101" =>
+					currentinteger <= output(5);
+				when "0110" =>	 
+					currentinteger <= output(6);				
+				when "0111" =>
+					currentinteger <= output(7);
+				when "1000" => 
+					currentinteger <= output(8);
+				when "1001" => 
+					currentinteger <= output(9);
+				when others => 
+					currentinteger <= output(9);
+			end case;
+		end if;
+	end process;
+	
+	process(networkclock)
+	begin
+		if(rising_edge(networkclock)) then
+			case SW(8 downto 5) is 
+				when "0000" =>
+					currentimage <= image_0;
+				when "0001" =>
+					currentimage <= image_1;
+				when "0010" => 
+					currentimage <= image_2;
+				when "0011" =>	 
+					currentimage <= image_3;
+				when "0100" =>	 
+					currentimage <= image_4;
+				when "0101" =>
+					currentimage <= image_5;
+				when "0110" =>	 
+					currentimage <= image_6;				
+				when "0111" =>
+					currentimage <= image_7;
+				when "1000" => 
+					currentimage <= image_8;
+				when "1001" => 
+					currentimage <= image_9;
+				when others => 
+					currentimage <= image_9;
+			end case;
+		end if;
+	end process;
+				
 	
 
 	 -- enter your statements here --

@@ -1,4 +1,4 @@
-Active-HDL 12.0.118.7745 2022-04-27 20:24:44
+Active-HDL 12.0.118.7745 2022-04-30 19:38:01
 
 Elaboration top modules:
 VHDL Configuration            testbench_for_fpga
@@ -13,6 +13,7 @@ fpga_tb                                                                         
 fpga                                                                                    | fpga             | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
 pll                                                                                     | rtl              | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
 network                                                                                 | network          | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
+mux                                                                                     | behavior         | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
 stratixv_lcell_comb                                                                     | vital_lcell_comb | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
 arriav_lcell_comb                                                                       | vital_lcell_comb | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
 arriavgz_lcell_comb                                                                     | vital_lcell_comb | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
@@ -214,3 +215,9 @@ std                                                                             
 stratixv                                                                                                   | Intel FPGA Quartus Prime Standard 20.1.1, STRATIXV VHDL library
 twentynm                                                                                                   | Intel FPGA Quartus Prime Standard 20.1.1, TWENTYNM VHDL library
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Simulation Options: asim -O5 -PL altera -PL altera_lnsim -PL altera_lnsim_ver -PL altera_mf -PL altera_mf_ver -PL altera_ver -PL arriaii -PL arriaii_hssi -PL arriaii_hssi_ver -PL arriaii_pcie_hip -PL arriaii_pcie_hip_ver -PL arriaii_ver -PL arriaiigz -PL arriaiigz_hssi -PL arriaiigz_hssi_ver -PL arriaiigz_pcie_hip -PL arriaiigz_pcie_hip_ver -PL arriaiigz_ver -PL arriav -PL arriav_hssi_ver -PL arriav_pcie_hip_ver -PL arriav_ver -PL arriavgz -PL arriavgz_hssi -PL arriavgz_hssi_ver -PL arriavgz_pcie_hip -PL arriavgz_pcie_hip_ver -PL arriavgz_ver -PL cyclone10lp -PL cyclone10lp_ver -PL cycloneiv -PL cycloneiv_hssi -PL cycloneiv_hssi_ver -PL cycloneiv_pcie_hip -PL cycloneiv_pcie_hip_ver -PL cycloneiv_ver -PL cycloneive -PL cycloneive_ver -PL cyclonev -PL cyclonev_hssi_ver -PL cyclonev_pcie_hip_ver -PL cyclonev_ver -PL fiftyfivenm -PL fiftyfivenm_ver -PL lpm -PL lpm_ver -PL maxii -PL maxii_ver -PL maxv -PL maxv_ver -PL sgate -PL sgate_ver -PL stratixiv -PL stratixiv_hssi -PL stratixiv_hssi_ver -PL stratixiv_pcie_hip -PL stratixiv_pcie_hip_ver -PL stratixiv_ver -PL stratixv -PL stratixv_hssi -PL stratixv_hssi_ver -PL stratixv_pcie_hip -PL stratixv_pcie_hip_ver -PL stratixv_ver -PL twentynm -PL twentynm_hip -PL twentynm_hip_ver -PL twentynm_hssi -PL twentynm_hssi_ver -PL twentynm_ver +access +r +m+testbench_for_fpga testbench_for_fpga
+
+
+The performance of simulation is reduced. Version EDU Edition

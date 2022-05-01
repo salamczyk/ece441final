@@ -130,4 +130,5 @@ set_global_assignment -name VHDL_FILE "./../src/final_proj_package.vhd"
 set_global_assignment -name VHDL_FILE "./../src/network.vhd"
 set_global_assignment -name VHDL_FILE "./../MEGA/pll.vhd"
 set_global_assignment -name VERILOG_FILE "./../MEGA/pll/pll_0002.v"
+set_global_assignment -name VHDL_FILE "./../src/mux.vhd"
 set_global_assignment -name TOP_LEVEL_ENTITY fpga
