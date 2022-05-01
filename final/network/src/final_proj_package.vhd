@@ -4,13 +4,14 @@ use ieee.numeric_std.all;
 
 
 package project_package is
-	type weight_1 is array (0 to 783, 0 to 127) of integer;   
-	type weight_2 is array (0 to 127, 0 to 9) of integer;	
+	-- 18-bit integers
+	type weight_1 is array (0 to 783, 0 to 127) of integer range -1048576 to 1048575;   
+	type weight_2 is array (0 to 127, 0 to 9) of integer range -1048576 to 1048575;	
 	
-	type intermediate_output is array (0 to 127) of integer;
-	type final_output is array (0 to 9) of integer;	  
+	type intermediate_output is array (0 to 127) of integer range -1048576 to 1048575;
+	type final_output is array (0 to 9) of integer range -1048576 to 1048575;	  
 	
-	type image is array(0 to 783) of integer; 
+	type image is array(0 to 783) of integer range -1048576 to 1048575; 
 	
 	constant weights_1 : weight_1 := ((17,6,-12,-7,-18,0,0,-5,3,-15,9,-4,6,-19,-16,-10,-16,-20,9,-17,1,3,18,17,-13,0,-4,1,13,9,-11,-13,2,4,4,-4,-12,-2,-13,-16,4,7,19,9,-16,-6,-3,14,-5,-9,-18,12,-17,0,-2,14,0,9,4,14,0,-16,-1,7,5,-10,11,-19,-15,-18,-15,-10,6,6,19,-12,6,8,-16,10,5,15,2,17,-1,17,9,-20,-7,8,-18,-14,-18,1,15,-12,16,-5,0,-8,15,11,-16,-3,-5,-12,-12,-18,-19,7,14,-2,8,6,13,7,7,18,0,11,-10,0,18,-6,17,-10,-13,-19),
 	(-19,-13,-15,-17,0,11,4,-8,-17,-14,-6,-4,11,13,1,1,-7,11,11,-5,7,11,4,-13,-9,-9,4,-3,8,-6,4,-20,-12,-5,5,-9,10,-3,8,-14,2,7,14,5,3,-16,-15,-12,0,-19,14,-13,-15,-14,-18,-8,-13,-18,-19,19,-7,13,19,-8,-15,1,-18,15,-16,0,2,7,-5,4,-7,-1,15,11,2,10,3,-1,1,-4,-9,-14,-5,-6,7,-9,13,-19,-19,-17,18,-14,-3,0,-19,8,-11,6,-5,-12,-14,11,-4,19,-2,-5,12,5,14,3,4,0,19,8,-16,1,1,-7,17,17,14,-5,5,0),

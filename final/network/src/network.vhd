@@ -115,17 +115,20 @@ begin
 				
 			when 4 =>	
 				report("State 4");
-					for j in 0 to 127 loop
-						output_2(i1) := output_2(i1) + output_1(j) * weights_2(j, i1); 
-						--report(integer'image(j));
-					end loop;
-					if i1 >= 9 then
-						i1 := 0;
-						state <= 5;
-					else
-						i1 := i1 + 1;
-						state <= 4;
-					end if;
+                                output_2(i1) := output_2(i1) + output_1(j1) * weights_2(j1, i1); 
+                                        --report(integer'image(j));
+                                if i1 >= 9 then
+                                  i1 := 0;
+                                  state <= 5;
+                                else
+                                  if j1 >= 127 then
+                                    j1 := 0;
+                                    i1 := i1 + 1;
+                                  else
+                                    j1 := j1 + 1;
+                                  end if;
+                                  state <= 4;
+                                end if;
 			when 5 => 	
 				report("State 5");
 				for j in 0 to 9 loop
