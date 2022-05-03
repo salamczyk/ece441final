@@ -1,5 +1,5 @@
 Flow report for fpga
-Sun May 01 16:47:08 2022
+Sun May 01 19:11:14 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,19 +41,19 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun May 01 16:47:08 2022       ;
+; Flow Status                     ; Successful - Sun May 01 19:11:14 2022       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; fpga                                        ;
 ; Top-level Entity Name           ; fpga                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 19,305 / 41,910 ( 46 % )                    ;
-; Total registers                 ; 3715                                        ;
+; Logic utilization (in ALMs)     ; 20,432 / 41,910 ( 49 % )                    ;
+; Total registers                 ; 5402                                        ;
 ; Total pins                      ; 70 / 499 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
-; Total DSP Blocks                ; 2 / 112 ( 2 % )                             ;
+; Total DSP Blocks                ; 4 / 112 ( 4 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                               ;
 ; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                               ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/01/2022 16:33:56 ;
+; Start date & time ; 05/01/2022 18:33:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; fpga                ;
 +-------------------+---------------------+
@@ -95,7 +95,7 @@ https://fpgasoftware.intel.com/eula.
 ; BOARD_MODEL_TLINE_C_PER_LENGTH            ; 0                                                                                                                            ; --            ; --               ; 1.2V                    ;
 ; BOARD_MODEL_TLINE_LENGTH                  ; 0                                                                                                                            ; --            ; --               ; 1.2V                    ;
 ; BOARD_MODEL_TLINE_L_PER_LENGTH            ; 0                                                                                                                            ; --            ; --               ; 1.2V                    ;
-; COMPILER_SIGNATURE_ID                     ; 4681965753228.165143723524496                                                                                                ; --            ; --               ; --                      ;
+; COMPILER_SIGNATURE_ID                     ; 238368718625488.165144441213488                                                                                              ; --            ; --               ; --                      ;
 ; EDA_GENERATE_POWER_INPUT_FILE             ; Off                                                                                                                          ; --            ; --               ; eda_simulation          ;
 ; EDA_OUTPUT_DATA_FORMAT                    ; Vhdl                                                                                                                         ; --            ; --               ; eda_simulation          ;
 ; EDA_OUTPUT_DATA_FORMAT                    ; None                                                                                                                         ; --            ; --               ; eda_board_design_symbol ;
@@ -107,6 +107,7 @@ https://fpgasoftware.intel.com/eula.
 ; INCREMENTAL_COMPILATION_EXPORT_ROUTING    ; -- (Not supported for targeted family)                                                                                       ; --            ; --               ; --                      ;
 ; MAX_CORE_JUNCTION_TEMP                    ; 85                                                                                                                           ; --            ; --               ; --                      ;
 ; MIN_CORE_JUNCTION_TEMP                    ; 0                                                                                                                            ; --            ; --               ; --                      ;
+; NUM_PARALLEL_PROCESSORS                   ; All                                                                                                                          ; --            ; --               ; --                      ;
 ; OPTIMIZE_HOLD_TIMING                      ; IO Paths and Minimum TPD Paths                                                                                               ; All Paths     ; --               ; --                      ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS            ; Half Signal Swing                                                                                                            ; --            ; --               ; --                      ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS            ; Half Signal Swing                                                                                                            ; --            ; --               ; --                      ;
@@ -131,12 +132,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:08:01     ; 5.7                     ; 5272 MB             ; 00:08:18                           ;
-; Fitter               ; 00:04:28     ; 1.5                     ; 8163 MB             ; 00:34:07                           ;
-; Assembler            ; 00:00:12     ; 1.0                     ; 5037 MB             ; 00:00:12                           ;
-; Timing Analyzer      ; 00:00:15     ; 6.8                     ; 5694 MB             ; 00:01:12                           ;
-; EDA Netlist Writer   ; 00:00:09     ; 1.0                     ; 4998 MB             ; 00:00:09                           ;
-; Total                ; 00:13:05     ; --                      ; --                  ; 00:43:58                           ;
+; Analysis & Synthesis ; 00:25:54     ; 5.7                     ; 5316 MB             ; 00:26:33                           ;
+; Fitter               ; 00:09:42     ; 1.5                     ; 7460 MB             ; 00:34:11                           ;
+; Assembler            ; 00:00:36     ; 1.0                     ; 5076 MB             ; 00:00:33                           ;
+; Timing Analyzer      ; 00:00:49     ; 4.8                     ; 5732 MB             ; 00:03:13                           ;
+; EDA Netlist Writer   ; 00:00:23     ; 1.0                     ; 5025 MB             ; 00:00:23                           ;
+; Total                ; 00:37:24     ; --                      ; --                  ; 01:04:53                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -145,11 +146,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Steve_Computer   ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; corsair          ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; corsair          ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; corsair          ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; corsair          ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; corsair          ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

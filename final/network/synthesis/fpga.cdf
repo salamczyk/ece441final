@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/Steph/Documents/GitHub/ece441final/final/network/synthesis/") File("fpga.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/Jacob/Documents/ECE441/ece441final/final/network/synthesis/") File("fpga.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

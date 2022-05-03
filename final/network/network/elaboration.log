@@ -1,4 +1,4 @@
-Active-HDL 12.0.118.7745 2022-05-01 16:17:10
+Active-HDL 12.0.118.7745 2022-05-02 21:27:44
 
 Elaboration top modules:
 Architecture                  TB_ARCHITECTURE(fpga_tb)
@@ -9,11 +9,11 @@ SystemVerilog Package         altera_generic_pll_functions
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Entity                                                                                  | Architecture     | Library      | Info | Compiler Version        | Compilation Options
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-fpga_tb                                                                                 | TB_ARCHITECTURE  | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
-fpga                                                                                    | fpga             | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
-pll                                                                                     | rtl              | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
-network                                                                                 | network          | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
-mux                                                                                     | behavior         | network      |      | 12.0.118.7745 (Windows) | -O3 -2019
+fpga_tb                                                                                 | TB_ARCHITECTURE  | network      |      | 12.0.118.7745 (Windows) | -O3 -2008
+fpga                                                                                    | fpga             | network      |      | 12.0.118.7745 (Windows) | -O3 -2008
+pll                                                                                     | rtl              | network      |      | 12.0.118.7745 (Windows) | -O3 -2008
+network                                                                                 | network          | network      |      | 12.0.118.7745 (Windows) | -O3 -2008
+mux                                                                                     | behavior         | network      |      | 12.0.118.7745 (Windows) | -O3 -2008
 stratixv_lcell_comb                                                                     | vital_lcell_comb | stratixv     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
 arriav_lcell_comb                                                                       | vital_lcell_comb | arriav       |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
 arriavgz_lcell_comb                                                                     | vital_lcell_comb | arriavgz     |      | 12.0.118.7745 (Windows) | -vendor Intel -sim_feature_tag LNL_ALTERA -93
